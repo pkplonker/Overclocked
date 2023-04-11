@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             rb.rotation = Quaternion.LookRotation(rb.velocity, new Vector3(0, 1, 0));
         }
 
-        if (Input.GetKey("space"))
+        if (Input.GetKeyDown("space"))
         {
             if (itemToggle == false)
             {

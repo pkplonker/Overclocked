@@ -7,23 +7,32 @@ ModelImporter:
       74: -1506962744704839605
     second: Armature|0default
   - first:
+      74: 4694203209649965798
+    second: Armature|defaultpickup
+  - first:
       74: -1978303741906493279
     second: Armature|idle
+  - first:
+      74: -138192578234829711
+    second: Armature|idlepickup
   - first:
       74: 8363436409549982457
     second: Armature|interact
   - first:
-      74: -4930797390354863410
-    second: Armature|pickup
-  - first:
       74: -7658076250912544148
     second: Armature|pickupRun
   - first:
-      74: 4615548368026989191
-    second: Armature|putdown
+      74: -4930797390354863410
+    second: Armature|pickup
+  - first:
+      74: -7658781401149789175
+    second: Armature|putDown
   - first:
       74: 1303299601406483602
     second: Armature|run
+  - first:
+      74: 4030916768139333780
+    second: rightarm|idlepickup
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -83,11 +92,69 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
+      name: Armature|defaultpickup
+      takeName: Armature|defaultpickup
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
       name: Armature|idle
       takeName: Armature|idle
       internalID: 0
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|idlepickup
+      takeName: Armature|idlepickup
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -116,7 +183,36 @@ ModelImporter:
       takeName: Armature|interact
       internalID: 0
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|pickupRun
+      takeName: Armature|pickupRun
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -145,7 +241,7 @@ ModelImporter:
       takeName: Armature|pickup
       internalID: 0
       firstFrame: 0
-      lastFrame: 19
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -170,40 +266,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|pickupRun
-      takeName: Armature|pickupRun
+      name: Armature|putDown
+      takeName: Armature|putDown
       internalID: 0
       firstFrame: 0
-      lastFrame: 39
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Armature|putdown
-      takeName: Armature|putdown
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 1
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -232,7 +299,7 @@ ModelImporter:
       takeName: Armature|run
       internalID: 0
       firstFrame: 0
-      lastFrame: 39
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
