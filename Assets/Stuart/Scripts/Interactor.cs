@@ -11,8 +11,7 @@ namespace Stuart
         private List<IInteractable> currentInteractorsInRange = new();
         private void OnTriggerEnter(Collider other)
         {
-            var interactable = other.GetComponent<IInteractable>();
-            if (interactable == null) return;
+            if (!other.TryGetComponent<IInteractable>(out var interactable)) return;
             if(!currentInteractorsInRange.Contains(interactable))
                 currentInteractorsInRange.Add(interactable);
         }

@@ -5,8 +5,8 @@ namespace Stuart
 {
     public class Inventory : MonoBehaviour
     {
-        public event Action<ItemBaseSO> OnItemChanged;
         private ItemBaseSO currentItem;
+
         public ItemBaseSO CurrentItem
         {
             get => currentItem;
@@ -14,10 +14,15 @@ namespace Stuart
             {
                 currentItem = value;
                 OnItemChanged?.Invoke(currentItem);
+#if UNITY_EDITOR
+                Debug.Log($"Picked up {value.objectName}");
+#endif
             }
         }
+        public event Action<ItemBaseSO> OnItemChanged;
+
         public void AddItem(ItemBaseSO item)=>CurrentItem = item;
-        public ItemBaseSO AddItem()
+        public ItemBaseSO RemoveItem()
         {
             var item = CurrentItem;
             CurrentItem = null;

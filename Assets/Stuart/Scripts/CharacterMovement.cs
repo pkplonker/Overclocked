@@ -25,9 +25,9 @@ namespace Stuart
 
         private void ApplyMovement(Vector3 dir)
         {
-            transform.rotation = Quaternion.LookRotation(dir);
-            transform.position -= transform.forward * (movementSpeed * Time.deltaTime);
-
+            var t = transform;
+            t.rotation = Quaternion.LookRotation(dir);
+            t.position -= t.forward * (movementSpeed * Time.deltaTime);
         }
     }
 }
