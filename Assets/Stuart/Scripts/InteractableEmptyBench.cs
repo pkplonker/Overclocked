@@ -24,12 +24,23 @@ namespace Stuart
 
         private bool RemoveItemFromBench(Inventory invent)
         {
-            //todo 
-            return false;
+            if (invent == null) return false;
+            if (invent.CurrentItem != null)
+                invent.RemoveItem();
+            invent.AddItem(item);
+            RemoveItem();
+            return true;
+        }
+
+        private void RemoveItem()
+        {
+            Destroy(spawnedItem);
+            item = null;
         }
 
         private bool AddItemToBench(Inventory invent)
         {
+            if (invent == null) return false;
             if (invent.CurrentItem == null) return false;
             item= invent.RemoveItem();
             if (item == null) return false;
