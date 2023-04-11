@@ -27,14 +27,21 @@ namespace Stuart
 			var itemToAdd= invent.RemoveItem();
 			if (itemToAdd == null || itemToAdd==CurrentItem) return;
 			CurrentItem = itemToAdd;
-			currentSpawnedItem = Instantiate(CurrentItem.prefab, itemSpot.position, Quaternion.identity, transform);
+			SpawnItem();
 		}
 
-		public void AddItem(ItemBaseSO item)
+		private void SpawnItem()
+		{
+			if(currentSpawnedItem!=null)
+				Destroy(currentSpawnedItem);
+			currentSpawnedItem = Instantiate(CurrentItem.prefab, itemSpot.position, Quaternion.identity, itemSpot);
+		}
+
+		public void AddItemToBench(ItemBaseSO item)
 		{
 			if (item == null || item==CurrentItem) return;
-			CurrentItem = item;
-			currentSpawnedItem = Instantiate(CurrentItem.prefab, itemSpot.position, Quaternion.identity, transform);
+			currentItem = item;
+			SpawnItem();
 		}
 
 		protected virtual void AddItemToPlayerInvent(Inventory invent,ItemBaseSO itemToAdd)

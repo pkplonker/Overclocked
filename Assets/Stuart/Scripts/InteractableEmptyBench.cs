@@ -25,7 +25,6 @@ namespace Stuart
                 }
                 else
                     AddItemToBench(invent);
-                
             }
             else
             {

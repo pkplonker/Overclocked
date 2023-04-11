@@ -27,7 +27,6 @@ public class CompositeBench : MonoBehaviour
 		var required = new List<ItemBaseSO>(itemsRequired);
 		required = required.Except(currentItems).ToList();
 		if (required.Count > 0) return;
-
 		foreach (var t in itemsRequired)
 		{
 			foreach (var b in benches)
@@ -38,6 +37,6 @@ public class CompositeBench : MonoBehaviour
 			}
 		}
 
-		bench.AddItem(createdItem);
+		bench.AddItemToBench(createdItem);
 	}
 }
