@@ -6,6 +6,6 @@ namespace Stuart
 {
     public interface IInteractable
     {
-        public bool Interact(Interactor interactor);
+        public  void Interact(Interactor interactor);
     }
 }

@@ -3,50 +3,35 @@ using UnityEngine;
 
 namespace Stuart
 {
-    public class InteractableEmptyBench : MonoBehaviour ,IInteractable
+    public class InteractableEmptyBench : Bench
     {
-        private ItemBaseSO item;
-        [SerializeField] private Transform itemSpot;
-        private GameObject spawnedItem;
-
         private void OnValidate()
         {
             if(itemSpot==null)
                 Debug.LogWarning("Missing itemspot");
         }
 
-        public bool Interact(Interactor interactor)
+        public override void Interact(Interactor interactor)
         {
             Debug.Log($"Interacted with bench ");
-            if (!interactor.TryGetComponent<Inventory>(out var invent)) return true;
-            return item == null ? AddItemToBench(invent) : RemoveItemFromBench(invent);
+            if (!interactor.TryGetComponent<Inventory>(out var invent)) return;
+            if (invent.CurrentItem != null)
+                AddItemToBench(invent);
+            else
+            {
+                AddItemToPlayerInvent(invent);
+                RemoveItemFromBench(invent);
+            }
         }
 
-        private bool RemoveItemFromBench(Inventory invent)
+        private void RemoveItemFromBench(Inventory invent)
         {
-            if (invent == null) return false;
+            if (invent == null) return;
             if (invent.CurrentItem != null)
                 invent.RemoveItem();
-            invent.AddItem(item);
-            RemoveItem();
-            return true;
+            invent.AddItem(currentItem);
+            Destroy(currentSpawnedItem);
+            currentItem = null;
         }
-
-        private void RemoveItem()
-        {
-            Destroy(spawnedItem);
-            item = null;
-        }
-
-        private bool AddItemToBench(Inventory invent)
-        {
-            if (invent == null) return false;
-            if (invent.CurrentItem == null) return false;
-            item= invent.RemoveItem();
-            if (item == null) return false;
-            spawnedItem = Instantiate(item.prefab, itemSpot.position, Quaternion.identity, transform);
-            return true;
-        }
-        
     }
 }

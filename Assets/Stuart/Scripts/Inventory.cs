@@ -12,6 +12,7 @@ namespace Stuart
             get => currentItem;
             set
             {
+                if (currentItem == value) return;
                 currentItem = value;
                 OnItemChanged?.Invoke(currentItem);
 #if UNITY_EDITOR
