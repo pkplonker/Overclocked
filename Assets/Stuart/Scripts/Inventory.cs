@@ -5,7 +5,7 @@ namespace Stuart
 {
     public class Inventory : MonoBehaviour
     {
-        private ItemBaseSO currentItem;
+     [SerializeField]   private ItemBaseSO currentItem;
 
         public ItemBaseSO CurrentItem
         {
@@ -15,7 +15,9 @@ namespace Stuart
                 currentItem = value;
                 OnItemChanged?.Invoke(currentItem);
 #if UNITY_EDITOR
-                Debug.Log($"Picked up {value.objectName}");
+                if (value != null)
+                    Debug.Log($"Added {value.objectName} to inventory");
+                else Debug.Log($"Removed item from inventory");
 #endif
             }
         }

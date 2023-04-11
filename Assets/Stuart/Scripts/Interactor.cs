@@ -16,6 +16,13 @@ namespace Stuart
                 currentInteractorsInRange.Add(interactable);
         }
 
+        private void OnTriggerExit(Collider other)
+        {
+            if (!other.TryGetComponent<IInteractable>(out var interactable)) return;
+            if(currentInteractorsInRange.Contains(interactable))
+                currentInteractorsInRange.Remove(interactable);
+        }
+
         private void Update()
         {
             if (!Input.GetKeyDown(interactKey) || currentInteractorsInRange.Count == 0) return;
