@@ -10,15 +10,13 @@ namespace Stuart
         public ItemBaseSO CurrentItem
         {
             get => currentItem;
-            set
+            private set
             {
                 if (currentItem == value) return;
                 currentItem = value;
                 OnItemChanged?.Invoke(currentItem);
 #if UNITY_EDITOR
-                if (value != null)
-                    Debug.Log($"Added {value.objectName} to inventory");
-                else Debug.Log($"Removed item from inventory");
+                Debug.Log(value != null ? $"Added {value.objectName} to inventory" : "Removed item from inventory");
 #endif
             }
         }

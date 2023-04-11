@@ -13,25 +13,27 @@ namespace Stuart
 
         public override void Interact(Interactor interactor)
         {
-            Debug.Log($"Interacted with bench ");
+            Debug.Log("Interacted with bench ");
             if (!interactor.TryGetComponent<Inventory>(out var invent)) return;
             if (invent.CurrentItem != null)
-                AddItemToBench(invent);
+            {
+                if (CurrentItem != null)
+                {
+                    var cached = CurrentItem;
+                    AddItemToBench(invent);
+                    AddItemToPlayerInvent(invent,cached);
+                }
+                else
+                    AddItemToBench(invent);
+                
+            }
             else
             {
-                AddItemToPlayerInvent(invent);
+                AddItemToPlayerInvent(invent,CurrentItem);
                 RemoveItemFromBench(invent);
             }
         }
 
-        private void RemoveItemFromBench(Inventory invent)
-        {
-            if (invent == null) return;
-            if (invent.CurrentItem != null)
-                invent.RemoveItem();
-            invent.AddItem(currentItem);
-            Destroy(currentSpawnedItem);
-            currentItem = null;
-        }
+        
     }
 }

@@ -6,12 +6,9 @@ namespace Stuart
     {
         public override void Interact(Interactor interactor)
         {
-            Debug.Log($"Interacted with bench for {currentItem.objectName}");
+            Debug.Log($"Interacted with bench for {CurrentItem.objectName}");
             var invent = GetInvent(interactor);
-            if (invent == null) return;
-            if (invent.CurrentItem != null)
-                invent.RemoveItem();
-            invent.AddItem(currentItem);
+            AddItemToPlayerInvent(invent, CurrentItem);
         }
     }
 }
