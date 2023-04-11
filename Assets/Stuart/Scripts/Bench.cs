@@ -11,7 +11,7 @@ namespace Stuart
 		public ItemBaseSO CurrentItem
 		{
 			get => currentItem;
-			private set { currentItem = value; OnItemChanged?.Invoke(this,currentItem); }
+			protected set { currentItem = value; OnItemChanged?.Invoke(this,currentItem); }
 
 		}
 		[SerializeField] protected Transform itemSpot;
@@ -30,7 +30,7 @@ namespace Stuart
 			SpawnItem();
 		}
 
-		private void SpawnItem()
+		protected void SpawnItem()
 		{
 			if(currentSpawnedItem!=null)
 				Destroy(currentSpawnedItem);

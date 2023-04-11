@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Stuart
 {
-    public class InteractableItemBench : Bench
+    public class ItemSpawnBench : Bench
     {
         public override void Interact(Interactor interactor)
         {

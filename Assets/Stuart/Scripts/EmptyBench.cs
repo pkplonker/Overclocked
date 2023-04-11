@@ -1,9 +1,8 @@
-using System;
 using UnityEngine;
 
 namespace Stuart
 {
-    public class InteractableEmptyBench : Bench
+    public class EmptyBench : Bench
     {
         private void OnValidate()
         {
