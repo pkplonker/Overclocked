@@ -27,12 +27,22 @@ namespace Stuart
 
         private void TestTimer()
         {
-            if(testTimerCor !=null)
-                StopCoroutine(testTimerCor);
+            StopTimer();
             if(CurrentItem==requiredItem)
                 testTimerCor = StartCoroutine(TestTimerCoroutine());
         }
 
+        private void StopTimer()
+        {
+            if (testTimerCor != null)
+                StopCoroutine(testTimerCor);
+        }
+
+        protected override void RemoveItemFromBench(Inventory invent)
+        {
+            base.RemoveItemFromBench(invent);
+            StopTimer();
+        }
         private IEnumerator TestTimerCoroutine()
         {
             var countdown = 0f;
