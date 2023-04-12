@@ -11,7 +11,9 @@ namespace Stuart
         [SerializeField] private float gameStartInitialDelay = 1f;
         [SerializeField] private float gameStartCountdown = 3f;
         private List<CharacterMovement> players;
-
+        [SerializeField] private KeyCode pauseKey = KeyCode.Escape;
+        private bool isPaused;
+        public event Action<bool> OnPauseChanged; 
         private void Awake()
         {
             if (Instance == null) Instance = this;
@@ -43,10 +45,28 @@ namespace Stuart
             GameStart();
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(pauseKey))
+                PauseGameToggle();
+        }
+
+        private void PauseGameToggle()
+        {
+            isPaused = !isPaused;
+            SetPlayerMovement(false);
+            OnPauseChanged?.Invoke(isPaused);
+        }
+
         private void GameStart()
         {
-            foreach (var player in players) player.canMove = true;
+            SetPlayerMovement(true);
             OnGameStart?.Invoke();
+        }
+
+        private void SetPlayerMovement(bool canMove)
+        {
+            foreach (var player in players) player.canMove = canMove;
         }
     }
 }
