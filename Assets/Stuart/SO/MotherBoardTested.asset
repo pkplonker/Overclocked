@@ -18,7 +18,7 @@ MonoBehaviour:
   value: 0
   subItems: []
   isTestPass: 0
-  failedPrefab: {fileID: 4293561191212948987, guid: 253de4b0bd5dc1f40821575c53454be5,
+  failedPrefab: {fileID: 4293561191212948987, guid: 8073a0b4a8fa5a74a823a2841f23c1e6,
     type: 3}
-  passedPrefab: {fileID: 4293561191212948987, guid: 8073a0b4a8fa5a74a823a2841f23c1e6,
+  passedPrefab: {fileID: 5978752483569913061, guid: 6eb95a9270dc38f41a8be9e7f82d4eaf,
     type: 3}

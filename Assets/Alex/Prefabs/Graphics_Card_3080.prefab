@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 3670714071648293438}
   - component: {fileID: 631794809107137437}
   - component: {fileID: 4248657636787906782}
+  - component: {fileID: -6870688686361457420}
   m_Layer: 0
   m_Name: Graphics_Card_3080
   m_TagString: Untagged
@@ -293,6 +294,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-6870688686361457420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904275893293753182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eeaf7210c0079f459bc669c5ec48807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSO: {fileID: 11400000, guid: b065aeef496e16d4584ecd82519dcc14, type: 2}
 --- !u!1 &2001290164613457866
 GameObject:
   m_ObjectHideFlags: 0

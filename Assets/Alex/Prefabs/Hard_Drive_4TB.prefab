@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 1854643997806736229}
   - component: {fileID: 2035619446140018946}
   - component: {fileID: 1181697770315984174}
+  - component: {fileID: 9211297706924929439}
   m_Layer: 0
   m_Name: Hard_Drive_4TB
   m_TagString: Untagged
@@ -185,6 +186,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9211297706924929439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3534744173803193496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eeaf7210c0079f459bc669c5ec48807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSO: {fileID: 11400000, guid: cd11ae220c1c0f846823fa667f22be64, type: 2}
 --- !u!1 &7721126823556060015
 GameObject:
   m_ObjectHideFlags: 0

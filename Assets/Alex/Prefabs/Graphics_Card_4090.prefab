@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 9068589483211926166}
   - component: {fileID: 5365407300251002163}
   - component: {fileID: 7895151866268307961}
+  - component: {fileID: 2654044497992723156}
   m_Layer: 0
   m_Name: Graphics_Card_4090
   m_TagString: Untagged
@@ -192,6 +193,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2654044497992723156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8543832872371417132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eeaf7210c0079f459bc669c5ec48807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSO: {fileID: 11400000, guid: 8e32f983ed4ef3a44853d744546f4e6c, type: 2}
 --- !u!1 &8813724150725848619
 GameObject:
   m_ObjectHideFlags: 0
