@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2763809192323085362}
   - component: {fileID: 2763809192323085357}
   - component: {fileID: 2763809192323085361}
+  - component: {fileID: 8095225886449728750}
   m_Layer: 5
   m_Name: CompositeUI
   m_TagString: Untagged
@@ -85,7 +86,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2763809192323085362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +126,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9039febb179d024797ce4d49b969f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8095225886449728750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2763809192323085359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a5986c45ee1f844a9ec93ebf131e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2763809192506190581
