@@ -41,6 +41,7 @@ namespace Stuart
         {
             var go = Instantiate(item.GetPrefab(), new Vector3(transform.position.x, groundOffset, transform.position.z),
                 Quaternion.identity);
+            go.GetComponent<Item>().itemSO = currentItem;
             go.AddComponent<ItemPickup>();
         }
     }
