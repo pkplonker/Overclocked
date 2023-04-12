@@ -31,30 +31,34 @@ namespace Stuart
 
 		private string UpdateText(ItemBaseSO item)
 		{
-			var s = "";
+			var s = "<mark=#00000090>";
 			var thisItem = item as CompositeItem;
 			if (thisItem == null)
 			{
-				switch (thisItem.type)
+				switch (item.type)
 				{
 					case ItemType.HDD:
-						s += $"{thisItem.value}GB {thisItem.type.ToString()}\n";
+						s += $"{item.value}TB {item.type.ToString()}\n";
 						break;
 					case ItemType.GPU:
-						s += $"{thisItem.value} {thisItem.type.ToString()}\n";
+						s += $"{item.value} {item.type.ToString()}\n";
 						break;
 					case ItemType.RAM:
-						s += $"{thisItem.value}GB {thisItem.type.ToString()}\n";
+						s += $"{item.value}GB {item.type.ToString()}\n";
 						break;
 				}
-				return s;
+
+				s += "</mark>";
+				tmp.enableWordWrapping = false;
+				return s.TrimEnd('\r', '\n');
 			}
+
 			foreach (var sumItem in thisItem.subItems)
 			{
 				switch (sumItem.type)
 				{
 					case ItemType.HDD:
-						s += $"{sumItem.value}GB {sumItem.type.ToString()}\n";
+						s += $"{sumItem.value}TB {sumItem.type.ToString()}\n";
 						break;
 					case ItemType.GPU:
 						s += $"{sumItem.value} {sumItem.type.ToString()}\n";
@@ -64,7 +68,9 @@ namespace Stuart
 						break;
 				}
 			}
+
 			return s.TrimEnd('\r', '\n');
 		}
+
 	}
 }
