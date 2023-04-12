@@ -23,13 +23,29 @@ namespace Stuart
             var required = new List<RequiredItem>(itemsRequired);
 
             for (var i = required.Count - 1; i >= 0; i--)
+            {
                 foreach (var it in currentItems)
                 {
                     if (it == null) continue;
                     if (required[i].type != it.type || required[i].value != it.value) continue;
-                    required.RemoveAt(i);
-                    break;
+                    CompositeItemTested tp = it as CompositeItemTested;
+                    if (required[i].testedPartRequired)
+                    {
+                        if (tp != null && tp.isTestPass)
+                        {
+                            Debug.Log($"Found {required[i].type}");
+                            required.RemoveAt(i);
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log($"Found {required[i].type}");
+                        required.RemoveAt(i);
+                        break;
+                    }
                 }
+            }
 
             if (required.Count > 0) return;
             var created = Instantiate(createdItem);
@@ -52,11 +68,12 @@ namespace Stuart
     {
         public ItemType type;
         public float value;
-
-        public RequiredItem(ItemType type, float value)
+        public bool testedPartRequired;
+        public RequiredItem(ItemType type, float value, bool testedPartRequired=false)
         {
             this.type = type;
             this.value = value;
+            this.testedPartRequired = testedPartRequired;
         }
     }
 }

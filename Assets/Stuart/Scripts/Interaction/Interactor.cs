@@ -44,11 +44,11 @@ namespace Stuart
                     if (interactable.Equals(null)) continue;
                     var dir = interactable.GetTransform().position - transform.position;
                     var angle = Mathf.Abs(Vector3.Angle(transform.forward, dir));
-                    Debug.Log($"Angle to {interactable.GetTransform().gameObject.name} is {angle}");
+                 //   Debug.Log($"Angle to {interactable.GetTransform().gameObject.name} is {angle}");
                     if (angle > closestAngle) continue;
                     closestAngle = angle;
                     closest = interactable;
-                    Debug.Log($"New closest is {interactable.GetTransform().gameObject.name}");
+//                    Debug.Log($"New closest is {interactable.GetTransform().gameObject.name}");
                 }
 
                 if (closest != null)

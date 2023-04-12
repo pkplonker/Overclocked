@@ -15,7 +15,7 @@ namespace Stuart
         public override void Interact(Interactor interactor)
         {
 #if UNITY_EDITOR
-            Debug.Log("Interacted with bench ");
+           // Debug.Log("Interacted with bench ");
 #endif
             if (!interactor.TryGetComponent<Inventory>(out var invent)) return;
             if (invent.CurrentItem != null)

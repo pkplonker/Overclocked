@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ace3b8bc5d0e544fb9f90957a3ee0dd, type: 3}
+  m_Name: FinalAssemblyTested
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6745357703592716154, guid: 6621c4f61bde76842b4c1e489b4a6298, type: 3}
+  objectName: FinalAssemblyTested
+  type: 7
+  value: 0
+  subItems: []
+  isTestPass: 0
+  failedPrefab: {fileID: 6745357703592716154, guid: 83ef3cb95dd6ef44bbe85133dfc5ea50,
+    type: 3}
+  passedPrefab: {fileID: 8989458804033187643, guid: 9e1cc52c4cabddc469ec13f0da346397,
+    type: 3}

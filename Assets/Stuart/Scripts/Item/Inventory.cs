@@ -17,7 +17,7 @@ namespace Stuart
                 currentItem = value;
                 OnItemChanged?.Invoke(currentItem);
 #if UNITY_EDITOR
-                Debug.Log(value != null ? $"Added {value.objectName} to inventory" : "Removed item from inventory");
+               // Debug.Log(value != null ? $"Added {value.objectName} to inventory" : "Removed item from inventory");
 #endif
             }
         }
@@ -39,7 +39,6 @@ namespace Stuart
 
         private void DropItem(ItemBaseSO item)
         {
-            
             var go = Instantiate(item.GetPrefab(), new Vector3(transform.position.x, groundOffset, transform.position.z),
                 item.GetPrefab().transform.rotation);
             go.GetComponent<Item>().itemSO = item;
