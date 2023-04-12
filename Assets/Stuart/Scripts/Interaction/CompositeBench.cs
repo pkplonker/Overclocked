@@ -54,7 +54,19 @@ namespace Stuart
             {
                 if (b.CurrentItem == null) continue;
                 if (b.CurrentItem.type != t.type || b.CurrentItem.value != t.value) continue;
-                created.subItems.Add(new RequiredItem(b.CurrentItem.type, b.CurrentItem.value));
+                CompositeItem compositeItem = b.CurrentItem as CompositeItem;
+                if (compositeItem != null)
+                {
+                    foreach (var subitem in compositeItem.subItems)
+                    {
+                        created.subItems.Add(new RequiredItem(subitem.type, subitem.value));
+                    }
+                }
+                else
+                {
+                    created.subItems.Add(new RequiredItem(b.CurrentItem.type, b.CurrentItem.value));
+                }
+                
                 b.RemoveItem();
                 break;
             }
