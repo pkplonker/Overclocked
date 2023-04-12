@@ -21,7 +21,6 @@ namespace Stuart
                 ApplyMovement(-Vector3.right);
             else if (Input.GetKey(rightKey))
                 ApplyMovement(Vector3.right);
-            
         }
 
         private void ApplyMovement(Vector3 dir)
