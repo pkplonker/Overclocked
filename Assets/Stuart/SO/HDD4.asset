@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90419f74010ecf14a8e41af0833df9ea, type: 3}
-  m_Name: GPU3080
+  m_Name: HDD4
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1904275893293753182, guid: cfbd6d3e2e30010409afbdf977649daa, type: 3}
-  objectName: GPU
-  type: 4
-  value: 3080
+  prefab: {fileID: 3534744173803193496, guid: 131ed2a868dfda0429c471104d6da122, type: 3}
+  objectName: HDD
+  type: 3
+  value: 1

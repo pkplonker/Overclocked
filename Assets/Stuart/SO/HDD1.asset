@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90419f74010ecf14a8e41af0833df9ea, type: 3}
   m_Name: HDD1
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1591396314370775829, guid: 49e526ffa44eae140948cc6f60a0c8a1, type: 3}
+  prefab: {fileID: 2652724480781182555, guid: 01ce690f0df71e247a6116196bf7863d, type: 3}
   objectName: HDD
   type: 3
   value: 1

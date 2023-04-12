@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dffb1d76a7b53849b248b2116b24f08, type: 3}
   m_Name: MotherBoardAssembly
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1591396314370775829, guid: 2d00196a7083a8f4793d3c8e2e08bb85, type: 3}
+  prefab: {fileID: 4293561191212948987, guid: 253de4b0bd5dc1f40821575c53454be5, type: 3}
   objectName: Motherboard Assembly
   type: 7
   value: 0
   subItems: []
-  isTestPass: 0

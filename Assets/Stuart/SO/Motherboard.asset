@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90419f74010ecf14a8e41af0833df9ea, type: 3}
   m_Name: Motherboard
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1591396314370775829, guid: 27c193efa83ad2c42abb36fd92965db3, type: 3}
+  prefab: {fileID: 8660854403472311975, guid: f2dcfd7fd75afcf4f933cc2327504316, type: 3}
   objectName: Motherboard
   type: 1
   value: 0

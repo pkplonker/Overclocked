@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90419f74010ecf14a8e41af0833df9ea, type: 3}
-  m_Name: RAM8
+  m_Name: RAM32
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1591396314370775829, guid: e797a029c5fc1be49a6225f2bdf00cfb, type: 3}
+  prefab: {fileID: 2391285403835602392, guid: 7b37772e87c920d418d5e18f793a1374, type: 3}
   objectName: RAM
   type: 5
-  value: 8
+  value: 32

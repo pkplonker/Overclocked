@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ace3b8bc5d0e544fb9f90957a3ee0dd, type: 3}
   m_Name: MotherBoardTested
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1591396314370775829, guid: e797a029c5fc1be49a6225f2bdf00cfb, type: 3}
+  prefab: {fileID: 4293561191212948987, guid: 253de4b0bd5dc1f40821575c53454be5, type: 3}
   objectName: MotherBoardTested
   type: 7
   value: 0
   subItems: []
   isTestPass: 0
-  failedPrefab: {fileID: 1591396314370775829, guid: 27c193efa83ad2c42abb36fd92965db3,
+  failedPrefab: {fileID: 4293561191212948987, guid: 253de4b0bd5dc1f40821575c53454be5,
     type: 3}
-  passedPrefab: {fileID: 1591396314370775829, guid: e797a029c5fc1be49a6225f2bdf00cfb,
+  passedPrefab: {fileID: 4293561191212948987, guid: 8073a0b4a8fa5a74a823a2841f23c1e6,
     type: 3}
