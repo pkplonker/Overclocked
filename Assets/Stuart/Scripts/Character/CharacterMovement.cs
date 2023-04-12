@@ -10,9 +10,11 @@ namespace Stuart
         [SerializeField] private KeyCode leftKey = KeyCode.A;
         [SerializeField] private KeyCode rightKey = KeyCode.D;
         [SerializeField] private float movementSpeed = 3f;
-        public event Action<Vector3> OnMovementChanged; 
+        public event Action<Vector3> OnMovementChanged;
+        public bool canMove;
         private void Update()
         {
+            if (!canMove) return;
             if (Input.GetKey(forwardKey))
                 ApplyMovement(Vector3.forward);
             else if (Input.GetKey(backKey))
