@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1591396314370775831}
   - component: {fileID: 1108043206}
   m_Layer: 0
-  m_Name: TestItemAssembly
+  m_Name: RAM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8ca443de8a3964948809addff527a8f7, type: 2}
+  - {fileID: 2100000, guid: 20dcb778696f3734f9e059f7584d40f4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,4 +96,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eeaf7210c0079f459bc669c5ec48807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSO: {fileID: 11400000, guid: bc6b26ede26efa948a4c790d822200ba, type: 2}
+  itemSO: {fileID: 11400000, guid: f1e18e5a21622a34488ba89f9e1a077c, type: 2}

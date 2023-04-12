@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90419f74010ecf14a8e41af0833df9ea, type: 3}
-  m_Name: TestItem
+  m_Name: Motherboard
   m_EditorClassIdentifier: 
   prefab: {fileID: 1591396314370775829, guid: 27c193efa83ad2c42abb36fd92965db3, type: 3}
-  objectName: TestItem
+  objectName: Motherboard
+  type: 1
+  value: -1

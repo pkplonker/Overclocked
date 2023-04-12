@@ -10,6 +10,22 @@ namespace Stuart
     {
         public GameObject prefab;
         public string objectName;
+        public ItemType type = ItemType.NULL;
+        public float value = -1;
+    }
+   
+
+    public enum ItemType
+    {
+        NULL,
+        Motherboard,
+        PSU,
+        HDD,
+        GPU,
+        RAM,
+        Case,
+        MotherboardAssembly,
+        FinalAssembly
     }
 
 }
