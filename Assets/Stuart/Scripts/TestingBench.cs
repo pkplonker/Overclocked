@@ -56,7 +56,7 @@ namespace Stuart
             while(countdown < testTime)
             {
                 countdown += Time.deltaTime;
-                Debug.Log(countdown);
+                //Debug.Log(countdown);
                 yield return null;
             }
             RemoveItem();
@@ -66,7 +66,7 @@ namespace Stuart
             while(countdown < allowedTime)
             {
                 countdown += Time.deltaTime;
-                Debug.Log(countdown);
+                //Debug.Log(countdown);
                 yield return null;
             }
             RemoveItem();

@@ -28,7 +28,7 @@ namespace Stuart
         {
             var t = transform;
             t.rotation = Quaternion.LookRotation(dir);
-            t.position -= t.forward * (movementSpeed * Time.deltaTime);
+            t.position += t.forward * (movementSpeed * Time.deltaTime);
             OnMovementChanged?.Invoke(dir);
         }
     }

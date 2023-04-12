@@ -18,6 +18,7 @@ namespace Stuart
 		protected GameObject currentSpawnedItem;
 		public event Action<Bench,ItemBaseSO> OnItemChanged;
 		public abstract void Interact(Interactor interactor);
+		public Transform GetTransform() => transform;
 
 		protected static Inventory GetInvent(Interactor interactor)=>interactor.TryGetComponent<Inventory>(out var invent) ? invent : null;
 		
