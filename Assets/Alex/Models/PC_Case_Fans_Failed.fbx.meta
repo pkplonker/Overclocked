@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: 7836418192fdbfc4493628f4aed09ccf
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: 6851362689330279814
+    second: Fan.001|Idle
+  - first:
+      74: 5200340786043662489
+    second: Fan.001|Idle 2
+  - first:
+      74: -3704343504097676748
+    second: Fan.001|Spin
+  - first:
+      74: 1000744051984484490
+    second: Fan.001|Spin 2
+  - first:
+      74: 5775630143224635487
+    second: Fan.001|Spin 2.001
+  - first:
+      74: -6290179380364009285
+    second: Fan.001|Spin 2.002
+  - first:
+      74: -8181656859829042051
+    second: Fan.001|Spin.001
+  - first:
+      74: -1321948445327110374
+    second: Fan.001|Spin.002
+  - first:
+      74: 2686290448913632127
+    second: Fan.001|Spin.003
+  - first:
+      74: -4787093941978703098
+    second: Fan.001|Spin.004
+  - first:
+      74: -8476813405124537660
+    second: Fan.001|Spin.005
+  - first:
+      74: -929550650392830290
+    second: Fan.001|Spin.006
+  - first:
+      74: -2370266029178609495
+    second: Fan.001|Spin.007
+  - first:
+      74: -6358323724166265638
+    second: Fan.001|Spin.008
+  - first:
+      74: -6159211414203360461
+    second: Fan.001|Spin.009
+  - first:
+      74: 4374587075946848028
+    second: Fan.001|Spin.010
+  - first:
+      74: 4134253432606280498
+    second: Fan.001|Spin.011
+  - first:
+      74: 4251695789948557020
+    second: Fan.001|Spin.012
+  - first:
+      74: -3937871650158816529
+    second: Fan.001|Spin.013
+  - first:
+      74: 434155767744237912
+    second: Fan.001|Spin.014
+  - first:
+      74: -1174617285189981597
+    second: Fan.001|Spin.015
+  - first:
+      74: -1172201601601382859
+    second: Fan.002|Idle
+  - first:
+      74: 3071932986095510963
+    second: Fan.002|Idle 2
+  - first:
+      74: -1902695867615669193
+    second: Fan.002|Spin
+  - first:
+      74: -3920515333247401682
+    second: Fan.002|Spin 2
+  - first:
+      74: 4041978050784888804
+    second: Fan.002|Spin 2.001
+  - first:
+      74: -8747602481487650350
+    second: Fan.002|Spin 2.002
+  - first:
+      74: 2769986420807945794
+    second: Fan.002|Spin.001
+  - first:
+      74: 6970421087293181603
+    second: Fan.002|Spin.002
+  - first:
+      74: 4118461336035193928
+    second: Fan.002|Spin.003
+  - first:
+      74: 4656705624908650245
+    second: Fan.002|Spin.004
+  - first:
+      74: 8934104763292671695
+    second: Fan.002|Spin.005
+  - first:
+      74: 592336398828731555
+    second: Fan.002|Spin.006
+  - first:
+      74: -5488833837499965511
+    second: Fan.002|Spin.007
+  - first:
+      74: -8012375608200441920
+    second: Fan.002|Spin.008
+  - first:
+      74: -4969477966582785
+    second: Fan.002|Spin.009
+  - first:
+      74: -3377864749368159568
+    second: Fan.002|Spin.010
+  - first:
+      74: 2384156748063907527
+    second: Fan.002|Spin.011
+  - first:
+      74: -2585511268231820385
+    second: Fan.002|Spin.012
+  - first:
+      74: -47291815346911289
+    second: Fan.002|Spin.013
+  - first:
+      74: 4741620915695329164
+    second: Fan.002|Spin.014
+  - first:
+      74: -637559434016959736
+    second: Fan.002|Spin.015
+  - first:
+      74: -3161008653033328294
+    second: Fan.003|Idle
+  - first:
+      74: -5360078315191541337
+    second: Fan.003|Idle 2
+  - first:
+      74: 5562973841674021357
+    second: Fan.003|Spin
+  - first:
+      74: -2244363589380198368
+    second: Fan.003|Spin 2
+  - first:
+      74: 1129256855581604096
+    second: Fan.003|Spin 2.001
+  - first:
+      74: -6455641164024626700
+    second: Fan.003|Spin 2.002
+  - first:
+      74: 8359990719724394871
+    second: Fan.003|Spin.001
+  - first:
+      74: 7656701201396064302
+    second: Fan.003|Spin.002
+  - first:
+      74: -4837433744082209677
+    second: Fan.003|Spin.003
+  - first:
+      74: -1065691951957044867
+    second: Fan.003|Spin.004
+  - first:
+      74: 3398711305579792350
+    second: Fan.003|Spin.005
+  - first:
+      74: -568329677427797803
+    second: Fan.003|Spin.006
+  - first:
+      74: 6735777855350383559
+    second: Fan.003|Spin.007
+  - first:
+      74: 1438870018386313146
+    second: Fan.003|Spin.008
+  - first:
+      74: -289462633047129939
+    second: Fan.003|Spin.009
+  - first:
+      74: 464152052347307244
+    second: Fan.003|Spin.010
+  - first:
+      74: 4609708193459013191
+    second: Fan.003|Spin.011
+  - first:
+      74: 5360710780653776313
+    second: Fan.003|Spin.012
+  - first:
+      74: 7738785412378705224
+    second: Fan.003|Spin.013
+  - first:
+      74: -8838754798378097743
+    second: Fan.003|Spin.014
+  - first:
+      74: -3328889356370528522
+    second: Fan.003|Spin.015
+  - first:
+      74: -1624898600740345917
+    second: Fan.004|Idle
+  - first:
+      74: 2088267793557421269
+    second: Fan.004|Idle 2
+  - first:
+      74: 3722492627973052
+    second: Fan.004|Spin
+  - first:
+      74: -8134444300138948916
+    second: Fan.004|Spin 2
+  - first:
+      74: 2927299390783664871
+    second: Fan.004|Spin 2.001
+  - first:
+      74: -5952801670013067476
+    second: Fan.004|Spin 2.002
+  - first:
+      74: -7494426404036264122
+    second: Fan.004|Spin.001
+  - first:
+      74: -1256451776392137094
+    second: Fan.004|Spin.002
+  - first:
+      74: -3109419948469180822
+    second: Fan.004|Spin.003
+  - first:
+      74: 7393012590214664572
+    second: Fan.004|Spin.004
+  - first:
+      74: -5440693011102619420
+    second: Fan.004|Spin.005
+  - first:
+      74: -4691380205832471429
+    second: Fan.004|Spin.006
+  - first:
+      74: 8569347979359659269
+    second: Fan.004|Spin.007
+  - first:
+      74: 6290836747703832750
+    second: Fan.004|Spin.008
+  - first:
+      74: -7279061051941634117
+    second: Fan.004|Spin.009
+  - first:
+      74: 4335812217941851485
+    second: Fan.004|Spin.010
+  - first:
+      74: -1423034156500948234
+    second: Fan.004|Spin.011
+  - first:
+      74: 5429167456681753355
+    second: Fan.004|Spin.012
+  - first:
+      74: -6577629654189385930
+    second: Fan.004|Spin.013
+  - first:
+      74: 1599052180076137766
+    second: Fan.004|Spin.014
+  - first:
+      74: -903614074042899293
+    second: Fan.004|Spin.015
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
