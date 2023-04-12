@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dffb1d76a7b53849b248b2116b24f08, type: 3}
-  m_Name: MotherboardAssembly
+  m_Script: {fileID: 11500000, guid: 90419f74010ecf14a8e41af0833df9ea, type: 3}
+  m_Name: PSU
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4293561191212948987, guid: 253de4b0bd5dc1f40821575c53454be5, type: 3}
-  objectName: Motherboard Assembly
-  type: 7
+  prefab: {fileID: 1774873812092287553, guid: 790a63cd890e9e44f8f02849bf7be153, type: 3}
+  objectName: PSU
+  type: 2
   value: 0
-  subItems: []

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6dffb1d76a7b53849b248b2116b24f08, type: 3}
-  m_Name: MotherboardAssembly
+  m_Name: FinalAssembly
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4293561191212948987, guid: 253de4b0bd5dc1f40821575c53454be5, type: 3}
-  objectName: Motherboard Assembly
-  type: 7
+  prefab: {fileID: 6745357703592716154, guid: 6621c4f61bde76842b4c1e489b4a6298, type: 3}
+  objectName: FinalAssembly
+  type: 8
   value: 0
   subItems: []
