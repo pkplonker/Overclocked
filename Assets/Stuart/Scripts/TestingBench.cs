@@ -11,8 +11,8 @@ namespace Stuart
         private Coroutine testTimerCor;
         [SerializeField] private float testTime=5f;
         [SerializeField] private float allowedTime=4f;
-        public event Action<TestState> OnTestStateChange;
- 
+        public event Action<TestingStateData> OnTestStateChange;
+        private float countdown = 0f;
         private void OnValidate()
         {
 #if UNITY_EDITOR
@@ -37,7 +37,11 @@ namespace Stuart
         private void StopTimer()
         {
             if (testTimerCor != null)
+            {
                 StopCoroutine(testTimerCor);
+                OnTestStateChange?.Invoke(new TestingStateData(TestState.Aborted,GetElapsedTime,testTime));
+            }
+            
         }
 
         protected override void RemoveItemFromBench(Inventory invent)
@@ -47,17 +51,7 @@ namespace Stuart
         }
         private IEnumerator TestTimerCoroutine()
         {
-            OnTestStateChange?.Invoke(TestState.Started);
-            var countdown = 0f;
-            while(countdown < testTime)
-            {
-                countdown += Time.deltaTime;
-                Debug.Log(countdown);
-                yield return null;
-            }
-            RemoveItem();
-            AddItemToBench(createdItem);
-            OnTestStateChange?.Invoke(TestState.Complete);
+            OnTestStateChange?.Invoke(new TestingStateData(TestState.Started,GetElapsedTime,testTime));
             countdown = 0f;
             while(countdown < testTime)
             {
@@ -66,17 +60,45 @@ namespace Stuart
                 yield return null;
             }
             RemoveItem();
+            AddItemToBench(createdItem);
+            countdown = 0f;
+            OnTestStateChange?.Invoke(new TestingStateData(TestState.Complete,GetElapsedTime,allowedTime));
+            while(countdown < allowedTime)
+            {
+                countdown += Time.deltaTime;
+                Debug.Log(countdown);
+                yield return null;
+            }
+            RemoveItem();
             RemoveItem();
             AddItemToBench(failedItem);
-            OnTestStateChange?.Invoke(TestState.Failed);
+            OnTestStateChange?.Invoke(new TestingStateData(TestState.Failed,GetElapsedTime,allowedTime));
             testTimerCor = null;
         }
+
+        private float GetElapsedTime() => countdown;
+
     }
     public enum TestState
     {
         Started,
         Complete,
-        Failed
+        Failed,
+        Aborted
+    }
+
+    public struct TestingStateData
+    {
+        public TestState state;
+        public Func<float> getRemainingTime;
+        public float totalTime;
+
+        public TestingStateData(TestState state, Func<float> getRemainingTime, float totalTime)
+        {
+            this.state = state;
+            this.getRemainingTime = getRemainingTime;
+            this.totalTime = totalTime;
+        }
     }
 }
 
