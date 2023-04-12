@@ -8,6 +8,7 @@ public class vfxtest : MonoBehaviour
     [SerializeField] GameObject smoke;
     [SerializeField] GameObject boom;
     [SerializeField] GameObject sparkle;
+    [SerializeField] GameObject firework;
 
     private void Start()
     {
@@ -28,6 +29,10 @@ public class vfxtest : MonoBehaviour
         {
             Instantiate(boom, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity, transform);
             Instantiate(smoke, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity, transform);
+        }
+        if (Input.GetKeyDown("4"))
+        {
+            Instantiate(firework, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity, transform);
         }
     }
 

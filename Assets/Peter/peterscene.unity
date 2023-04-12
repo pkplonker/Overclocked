@@ -238,6 +238,8 @@ MonoBehaviour:
   smoke: {fileID: 9111119097650237007, guid: ad914116e0e0eaa4590e6c1956667e1c, type: 3}
   boom: {fileID: 7247584653966623460, guid: 80d07d26197e95e49ae181d155da9e49, type: 3}
   sparkle: {fileID: 2968644208522911066, guid: e49e504683034ae4481555e5e343e018, type: 3}
+  firework: {fileID: 4256441706071079503, guid: 516726ac70b07e849bbd0b9a0c1e6ab9,
+    type: 3}
 --- !u!114 &1509993900
 MonoBehaviour:
   m_ObjectHideFlags: 0
