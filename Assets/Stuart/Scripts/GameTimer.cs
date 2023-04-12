@@ -10,7 +10,7 @@ namespace Stuart
         private bool isPaused;
         private void Start()=>StartCoroutine(GameStartCor());
         private void OnEnable()=>GameController.Instance.OnPauseChanged += state => isPaused = state;
-        public event Action<float> OnTimeChanged;
+        public event Action<float,float> OnTimeChanged;
         private IEnumerator GameStartCor()
         {
             var countdown = 0f;
@@ -19,7 +19,7 @@ namespace Stuart
                 if (!isPaused)
                 {
                     countdown += Time.deltaTime;
-                    OnTimeChanged?.Invoke(countdown);
+                    OnTimeChanged?.Invoke(countdown,gameTime);
                 }
                 yield return null;
             }

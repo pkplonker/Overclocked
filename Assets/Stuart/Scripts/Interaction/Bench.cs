@@ -36,6 +36,7 @@ namespace Stuart
 			if(currentSpawnedItem!=null)
 				Destroy(currentSpawnedItem);
 			currentSpawnedItem = Instantiate(CurrentItem.prefab, itemSpot.position, Quaternion.identity, itemSpot);
+			currentSpawnedItem.GetComponent<Item>().itemSO = CurrentItem;
 		}
 
 		public void AddItemToBench(ItemBaseSO item)
