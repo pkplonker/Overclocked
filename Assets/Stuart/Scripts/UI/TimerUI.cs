@@ -13,11 +13,6 @@ namespace Stuart
         private TextMeshProUGUI tmp;
         private void Awake()=>tmp = GetComponent<TextMeshProUGUI>();
         private void Start()=>GameController.Instance.OnGameTick += GameTick;
-        private void GameTick(float elapsed, float total)
-        {
-            var t = TimeSpan.FromSeconds( total-elapsed );
-            tmp.text = string.Format($"{t.Minutes}:{t.Seconds}"); ;
-            
-        }
+        private void GameTick(float elapsed, float total)=>tmp.text = TimeSpan.FromSeconds( total-elapsed ).ToString(@"mm\:ss");
     }
 }
