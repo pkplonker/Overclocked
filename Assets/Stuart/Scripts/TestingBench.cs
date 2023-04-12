@@ -1,7 +1,6 @@
+using System;
 using System.Collections;
-using System.Threading;
 using UnityEngine;
-
 namespace Stuart
 {
     public class TestingBench : EmptyBench
@@ -12,11 +11,14 @@ namespace Stuart
         private Coroutine testTimerCor;
         [SerializeField] private float testTime=5f;
         [SerializeField] private float allowedTime=4f;
-
+        public event Action<TestState> OnTestStateChange;
+ 
         private void OnValidate()
         {
+#if UNITY_EDITOR
             if(itemSpot==null)
                 Debug.LogWarning("Missing itemspot");
+#endif
         }
         
         protected override void AddItemToBench(Inventory invent)
@@ -45,6 +47,7 @@ namespace Stuart
         }
         private IEnumerator TestTimerCoroutine()
         {
+            OnTestStateChange?.Invoke(TestState.Started);
             var countdown = 0f;
             while(countdown < testTime)
             {
@@ -52,12 +55,9 @@ namespace Stuart
                 Debug.Log(countdown);
                 yield return null;
             }
-            Debug.Log("Countdown complete");
             RemoveItem();
-            Debug.Log("Removed raw Item");
             AddItemToBench(createdItem);
-            Debug.Log("Created tested Item");
-
+            OnTestStateChange?.Invoke(TestState.Complete);
             countdown = 0f;
             while(countdown < testTime)
             {
@@ -66,12 +66,17 @@ namespace Stuart
                 yield return null;
             }
             RemoveItem();
-            Debug.Log("RemovedItem");
             RemoveItem();
-            Debug.Log("Removed raw Item");
             AddItemToBench(failedItem);
-            Debug.Log("Created failed Item");
+            OnTestStateChange?.Invoke(TestState.Failed);
             testTimerCor = null;
         }
     }
+    public enum TestState
+    {
+        Started,
+        Complete,
+        Failed
+    }
 }
+

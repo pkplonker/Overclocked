@@ -10,6 +10,7 @@ namespace Stuart
         [SerializeField] private KeyCode leftKey = KeyCode.A;
         [SerializeField] private KeyCode rightKey = KeyCode.D;
         [SerializeField] private float movementSpeed = 3f;
+        public event Action<Vector3> OnMovementChanged; 
         private void Update()
         {
             if (Input.GetKey(forwardKey))
@@ -28,6 +29,8 @@ namespace Stuart
             var t = transform;
             t.rotation = Quaternion.LookRotation(dir);
             t.position -= t.forward * (movementSpeed * Time.deltaTime);
+            OnMovementChanged?.Invoke(dir);
         }
     }
+    
 }
