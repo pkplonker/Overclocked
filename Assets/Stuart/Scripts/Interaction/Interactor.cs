@@ -34,7 +34,7 @@ namespace Stuart
                 if (currentInteractorsInRange[i].Equals(null)) currentInteractorsInRange.RemoveAt(i);
             }
             if (currentInteractorsInRange.Count == 0)
-           invent.AttemptDropItem();
+                invent.AttemptDropItem();
             else
             {
                 var closestAngle = float.MaxValue;
