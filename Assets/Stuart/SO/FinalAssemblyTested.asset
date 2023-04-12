@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6745357703592716154, guid: 6621c4f61bde76842b4c1e489b4a6298, type: 3}
   objectName: FinalAssemblyTested
-  type: 7
+  type: 8
   value: 0
   subItems: []
   isTestPass: 0

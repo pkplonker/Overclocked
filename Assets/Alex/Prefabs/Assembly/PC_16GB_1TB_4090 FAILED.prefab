@@ -2499,6 +2499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1165667312508670958}
+  - component: {fileID: 3535394049523443510}
   m_Layer: 0
   m_Name: PC_16GB_1TB_4090 FAILED
   m_TagString: Untagged
@@ -2526,6 +2527,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3535394049523443510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6263052179773252443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eeaf7210c0079f459bc669c5ec48807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSO: {fileID: 0}
+  compUIPrefab: {fileID: 2763809192323085361, guid: 3f4fcc6396a35714ba7bf2ce0a52d8ea,
+    type: 3}
 --- !u!1 &7281831664979251465
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,14 +33,14 @@ namespace Stuart
                     {
                         if (tp != null && tp.isTestPass)
                         {
-                            Debug.Log($"Found {required[i].type}");
+                           // Debug.Log($"Found {required[i].type}");
                             required.RemoveAt(i);
                             break;
                         }
                     }
                     else
                     {
-                        Debug.Log($"Found {required[i].type}");
+                        //Debug.Log($"Found {required[i].type}");
                         required.RemoveAt(i);
                         break;
                     }

@@ -307,6 +307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSO: {fileID: 11400000, guid: b065aeef496e16d4584ecd82519dcc14, type: 2}
+  compUIPrefab: {fileID: 2763809192323085361, guid: 3f4fcc6396a35714ba7bf2ce0a52d8ea,
+    type: 3}
 --- !u!1 &2001290164613457866
 GameObject:
   m_ObjectHideFlags: 0

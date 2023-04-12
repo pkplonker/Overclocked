@@ -62,6 +62,7 @@ namespace Stuart
             }
             RemoveItem();
             AddItemToBench(CreateTestedItem(cachedItem,createdItem, true));
+            Debug.Log("TestingComplete");
             countdown = 0f;
             OnTestStateChange?.Invoke(itemSpot, new TestingStateData(TestState.Complete,GetElapsedTime,allowedTime));
             while(countdown < allowedTime)
@@ -72,6 +73,7 @@ namespace Stuart
             }
             
             AddItemToBench(CreateTestedItem(cachedItem,createdItem, false));
+            Debug.Log("Testing Failed");
             OnTestStateChange?.Invoke(itemSpot, new TestingStateData(TestState.Failed,GetElapsedTime,allowedTime));
             testTimerCor = null;
         }

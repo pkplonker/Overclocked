@@ -97,3 +97,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSO: {fileID: 11400000, guid: 80ed9c272b2d70a4895c8404d13a11fe, type: 2}
+  compUIPrefab: {fileID: 2763809192323085361, guid: 3f4fcc6396a35714ba7bf2ce0a52d8ea,
+    type: 3}
