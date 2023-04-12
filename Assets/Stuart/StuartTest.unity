@@ -3011,6 +3011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameStartInitialDelay: 0
   gameStartCountdown: 0
+  gameTimeSeconds: 180
   pauseKey: 27
 --- !u!4 &1682307427
 Transform:
