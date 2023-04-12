@@ -10,7 +10,6 @@ namespace Stuart
         [SerializeField] private KeyCode interactKey = KeyCode.Space;
         private List<IInteractable> currentInteractorsInRange = new();
         private Inventory invent;
-        [SerializeField] private float groundOffset = 0.15f;
 
         private void Awake() => invent = GetComponent<Inventory>();
         private void OnTriggerEnter(Collider other)
@@ -30,13 +29,12 @@ namespace Stuart
         private void Update()
         {
             if (!Input.GetKeyDown(interactKey)) return;
-            for (int i = currentInteractorsInRange.Count - 1; i >= 0; i--)
+            for (var i = currentInteractorsInRange.Count - 1; i >= 0; i--)
             {
                 if (currentInteractorsInRange[i].Equals(null)) currentInteractorsInRange.RemoveAt(i);
-
             }
             if (currentInteractorsInRange.Count == 0)
-                AttemptDropItem();
+           invent.AttemptDropItem();
             else
             {
                 var closestAngle = float.MaxValue;
@@ -51,7 +49,6 @@ namespace Stuart
                     closestAngle = angle;
                     closest = interactable;
                     Debug.Log($"New closest is {interactable.GetTransform().gameObject.name}");
-
                 }
 
                 if (closest != null)
@@ -59,18 +56,6 @@ namespace Stuart
             }
         }
 
-        public void AttemptDropItem()
-        {
-            if (invent.CurrentItem == null) return;
-            var item = invent.RemoveItem();
-            DropItem(item);
-        }
-
-        private void DropItem(ItemBaseSO item)
-        {
-            var go = Instantiate(item.prefab, new Vector3(transform.position.x, groundOffset, transform.position.z),
-                Quaternion.identity);
-            go.AddComponent<ItemPickup>();
-        }
+        
     }
 }

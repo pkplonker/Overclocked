@@ -8,6 +8,7 @@ namespace Stuart
         {
             Debug.Log($"Interacted with bench for {CurrentItem.objectName}");
             var invent = GetInvent(interactor);
+            invent.AttemptDropItem();
             AddItemToPlayerInvent(invent, CurrentItem);
         }
     }

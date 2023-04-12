@@ -20,7 +20,7 @@ public class ItemPickup : MonoBehaviour, IInteractable
     public void Interact(Interactor interactor)
     {
        if (!interactor.TryGetComponent<Inventory>(out var invent)) return;
-       interactor.AttemptDropItem();
+       invent.AttemptDropItem();
        invent.AddItem(GetComponent<Item>().itemSO);
        Destroy(gameObject);
     }
