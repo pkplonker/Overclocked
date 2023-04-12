@@ -7,6 +7,6 @@ namespace Stuart
     public class CompositeItem : ItemBaseSO
     {
         public List<RequiredItem> subItems;
-        public bool isTestPass;
     }
+ 
 }

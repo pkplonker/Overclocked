@@ -33,7 +33,10 @@ namespace Stuart
             if(currentObject!=null)
                 Destroy(currentObject);
             if (currentItem != null)
-                currentObject = Instantiate(currentItem.prefab, carryTarget.position, Quaternion.identity, carryTarget);
+            {
+                currentObject = Instantiate(currentItem.GetPrefab(), carryTarget.position, Quaternion.identity, carryTarget);
+                currentObject.GetComponent<Item>().itemSO = currentItem;
+            }
         }
     }
 }

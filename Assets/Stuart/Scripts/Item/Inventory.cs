@@ -39,7 +39,7 @@ namespace Stuart
 
         private void DropItem(ItemBaseSO item)
         {
-            var go = Instantiate(item.prefab, new Vector3(transform.position.x, groundOffset, transform.position.z),
+            var go = Instantiate(item.GetPrefab(), new Vector3(transform.position.x, groundOffset, transform.position.z),
                 Quaternion.identity);
             go.AddComponent<ItemPickup>();
         }

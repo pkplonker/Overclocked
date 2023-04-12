@@ -64,9 +64,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1585
+    x: 1418
     y: 0
-    width: 335
+    width: 502
     height: 947
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
@@ -218,7 +218,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1585
+    width: 1418
     height: 947
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 384
+    x: 344
     y: 0
     width: 1201
     height: 712
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Stuart/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\whites27\GamesJam-Overcooked\Overclocked
+  m_LastProjectPath: C:\Users\heaths8\Desktop\Overclocked
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -336,18 +336,18 @@ MonoBehaviour:
     m_ExpandedIDs: 00000000165b0000185b00001a5b0000205b0000305b00007661000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: SO
+      m_OriginalName: SO
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 23926
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -438,9 +438,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1585
+    x: 1418
     y: 73
-    width: 334
+    width: 501
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -538,7 +538,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 384
+    x: 344
     y: 73
     width: 1199
     height: 691

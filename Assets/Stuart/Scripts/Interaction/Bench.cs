@@ -35,7 +35,7 @@ namespace Stuart
 		{
 			if(currentSpawnedItem!=null)
 				Destroy(currentSpawnedItem);
-			currentSpawnedItem = Instantiate(CurrentItem.prefab, itemSpot.position, Quaternion.identity, itemSpot);
+			currentSpawnedItem = Instantiate(CurrentItem.GetPrefab(), itemSpot.position, Quaternion.identity, itemSpot);
 			currentSpawnedItem.GetComponent<Item>().itemSO = CurrentItem;
 		}
 

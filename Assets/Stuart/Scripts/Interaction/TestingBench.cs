@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 namespace Stuart
 {
     public class TestingBench : EmptyBench
     {
-        [SerializeField] private ItemBaseSO requiredItem;
+        [SerializeField] private ItemType requiredItemType;
         [SerializeField] private ItemBaseSO createdItem;
-        [SerializeField] private ItemBaseSO failedItem;
         private Coroutine testTimerCor;
         [SerializeField] private float testTime=5f;
         [SerializeField] private float allowedTime=4f;
@@ -30,7 +30,7 @@ namespace Stuart
         private void TestTimer()
         {
             StopTimer();
-            if(CurrentItem==requiredItem)
+            if(CurrentItem.type ==requiredItemType)
                 testTimerCor = StartCoroutine(TestTimerCoroutine());
         }
 
@@ -52,6 +52,7 @@ namespace Stuart
         private IEnumerator TestTimerCoroutine()
         {
             OnTestStateChange?.Invoke(new TestingStateData(TestState.Started,GetElapsedTime,testTime));
+            var cachedItem = CurrentItem;
             countdown = 0f;
             while(countdown < testTime)
             {
@@ -60,7 +61,7 @@ namespace Stuart
                 yield return null;
             }
             RemoveItem();
-            AddItemToBench(createdItem);
+            AddItemToBench(CreateTestedItem(cachedItem,createdItem, true));
             countdown = 0f;
             OnTestStateChange?.Invoke(new TestingStateData(TestState.Complete,GetElapsedTime,allowedTime));
             while(countdown < allowedTime)
@@ -69,11 +70,24 @@ namespace Stuart
                 //Debug.Log(countdown);
                 yield return null;
             }
-            RemoveItem();
-            RemoveItem();
-            AddItemToBench(failedItem);
+            
+            AddItemToBench(CreateTestedItem(cachedItem,createdItem, false));
             OnTestStateChange?.Invoke(new TestingStateData(TestState.Failed,GetElapsedTime,allowedTime));
             testTimerCor = null;
+        }
+
+        private ItemBaseSO CreateTestedItem(ItemBaseSO cachedItem,ItemBaseSO item, bool p1)
+        {
+             var newItem =  Instantiate(item);
+             var n = (CompositeItemTested)newItem;
+             if (n == null)
+             {
+                 Debug.LogError("Item composition error");
+                 return null;
+             }
+             n.isTestPass = p1;
+             n.subItems = new List<RequiredItem>(((CompositeItem)cachedItem).subItems);
+             return n;
         }
 
         private float GetElapsedTime() => countdown;
