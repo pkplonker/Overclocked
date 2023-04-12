@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace Stuart
 {
-
     public class ItemCarry : MonoBehaviour
     {
         [SerializeField] private Transform carryTarget;
