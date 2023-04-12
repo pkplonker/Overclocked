@@ -15,4 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 1591396314370775829, guid: 27c193efa83ad2c42abb36fd92965db3, type: 3}
   objectName: Motherboard
   type: 1
-  value: -1
+  value: 0

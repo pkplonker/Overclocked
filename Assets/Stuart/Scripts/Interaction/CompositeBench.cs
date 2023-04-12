@@ -1,42 +1,62 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Stuart;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class CompositeBench : MonoBehaviour
+namespace Stuart
 {
-	[SerializeField] private List<ItemBaseSO> itemsRequired;
-	private List<Bench> benches;
-	[SerializeField] private ItemBaseSO createdItem;
+    public class CompositeBench : MonoBehaviour
+    {
+        [SerializeField] private List<RequiredItem> itemsRequired;
+        [SerializeField] private CompositeItem createdItem;
+        private List<Bench> benches;
 
-	private void Awake()
-	{
-		benches = GetComponentsInChildren<Bench>().ToList();
-		foreach (var b in benches)
-		{
-			b.OnItemChanged += OnItemChanged;
-		}
-	}
+        private void Awake()
+        {
+            benches = GetComponentsInChildren<Bench>().ToList();
+            foreach (var b in benches) b.OnItemChanged += OnItemChanged;
+        }
 
-	private void OnItemChanged(Bench bench, ItemBaseSO item)
-	{
-		var currentItems = benches.Select(b => b.CurrentItem).ToList();
-		var required = new List<ItemBaseSO>(itemsRequired);
-		required = required.Except(currentItems).ToList();
-		if (required.Count > 0) return;
-		foreach (var t in itemsRequired)
-		{
-			foreach (var b in benches)
-			{
-				if (b.CurrentItem != t) continue;
-				b.RemoveItem();
-				break;
-			}
-		}
+        private void OnItemChanged(Bench bench, ItemBaseSO item)
+        {
+            var currentItems = benches.Select(b => b.CurrentItem).ToList();
+            var required = new List<RequiredItem>(itemsRequired);
 
-		bench.AddItemToBench(createdItem);
-	}
+            for (var i = required.Count - 1; i >= 0; i--)
+                foreach (var it in currentItems)
+                {
+                    if (it == null) continue;
+                    if (required[i].type != it.type || required[i].value != it.value) continue;
+                    required.RemoveAt(i);
+                    break;
+                }
+
+            if (required.Count > 0) return;
+            var created = Instantiate(createdItem);
+            foreach (var t in itemsRequired)
+            foreach (var b in benches)
+            {
+                if (b.CurrentItem == null) continue;
+                if (b.CurrentItem.type != t.type || b.CurrentItem.value != t.value) continue;
+                created.subItems.Add(new RequiredItem(b.CurrentItem.type, b.CurrentItem.value));
+                b.RemoveItem();
+                break;
+            }
+
+            bench.AddItemToBench(created);
+        }
+    }
+
+    [Serializable]
+    public struct RequiredItem
+    {
+        public ItemType type;
+        public float value;
+
+        public RequiredItem(ItemType type, float value)
+        {
+            this.type = type;
+            this.value = value;
+        }
+    }
 }

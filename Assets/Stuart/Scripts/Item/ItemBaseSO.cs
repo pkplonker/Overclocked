@@ -11,7 +11,7 @@ namespace Stuart
         public GameObject prefab;
         public string objectName;
         public ItemType type = ItemType.NULL;
-        public float value = -1;
+        public float value = 0;
     }
    
 
