@@ -15,7 +15,7 @@ public class Item : MonoBehaviour
         Instantiate(compUIPrefab, transform.position, Quaternion.identity, transform);
         var obj = itemSO as CompositeItemTested;
         if (obj == null) return;
-        if (!obj.isTestPass) VFXController.SpawnFail(transform);
+        if (!obj.isTestPass) FXController.SpawnFail(transform);
     }
     
 }
