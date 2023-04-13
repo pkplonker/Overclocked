@@ -16,8 +16,6 @@ namespace Stuart
 				Debug.LogError("no item");
 				return;
 			}
-
-			//Debug.Log(item.itemSO.objectName);
 			tmp = GetComponentInChildren<TextMeshProUGUI>();
 			transform.position += Vector3.up * 0.3f;
 			tmp.text = UpdateText(item.itemSO);
@@ -43,7 +41,6 @@ namespace Stuart
 						s += $"{item.value}GB {item.type.ToString()}\n";
 						break;
 				}
-
 				s += "</mark>";
 				tmp.enableWordWrapping = false;
 				return s.TrimEnd('\r', '\n');
@@ -64,7 +61,6 @@ namespace Stuart
 						break;
 				}
 			}
-
 			return s.TrimEnd('\r', '\n');
 		}
 	}

@@ -15,8 +15,6 @@ namespace Stuart
         public virtual GameObject GetPrefab() => prefab;
 
     }
-   
-
     public enum ItemType
     {
         NULL,

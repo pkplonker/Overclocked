@@ -34,14 +34,11 @@ namespace Stuart
             while (countdown < gameStartInitialDelay)
             {
                 countdown += Time.deltaTime;
-                //Debug.Log(countdown);
                 yield return null;
             }
-
             countdown = 0f;
             while (countdown < gameStartCountdown)
             {
-              
                 countdown += Time.deltaTime;
                 OnGameStartTimerTick?.Invoke(gameStartCountdown - countdown);
                 yield return null;
@@ -56,8 +53,6 @@ namespace Stuart
         }
 
         private void PauseGameToggle()=>SetPause(!isPaused);
-        
-
         public void SetPause(bool state)
         {
             isPaused = state;
@@ -68,10 +63,6 @@ namespace Stuart
         private void GameStart()
         {
             SetPlayerMovement(true);
-#if UNITY_EDITOR
-            Debug.Log("Game Start");
-#endif
-            
             OnGameStart?.Invoke();
             StartCoroutine(GameTick());
         }
@@ -92,9 +83,6 @@ namespace Stuart
 
         private void SetGameOver()
         {
-#if UNITY_EDITOR
-            Debug.Log("GameOver");
-#endif
             SetPlayerMovement(false);
             OnGameOver?.Invoke(false);
         }

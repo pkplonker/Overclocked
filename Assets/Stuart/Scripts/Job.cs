@@ -10,7 +10,7 @@ namespace Stuart
     {
         public List<ItemBaseSO> requiredItems;
     }
-[Serializable]
+    [Serializable]
     public struct JobWithTiming
     {
         public Job job;

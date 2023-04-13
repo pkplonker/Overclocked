@@ -8,9 +8,7 @@ namespace Stuart
 	public class Item : MonoBehaviour
 	{
 		public ItemBaseSO itemSO;
-
 		[SerializeField] private UIComposite compUIPrefab;
-
 		private void Start()
 		{
 			Instantiate(compUIPrefab, transform.position, Quaternion.identity, transform);

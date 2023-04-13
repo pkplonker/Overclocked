@@ -36,7 +36,6 @@ namespace Stuart
 			{
 				tb.OnTestStateChange += TestStateChange;
 			}
-
 			smokeVFX1 = smokeVFX;
 			JobBench.OnJobCompleted += JobCompleted;
 		}
@@ -46,7 +45,6 @@ namespace Stuart
 			PlayClip(sellSFX);
 			Instantiate(sellVFX, t);
 		}
-		
 
 		private void TestStateChange(GameObject go, TestingStateData args)
 		{
@@ -91,7 +89,6 @@ namespace Stuart
 		public static void SpawnFail(Transform t)
 		{
 			SpawnVFX(t.gameObject, smokeVFX1);
-			//PlayClip(instance.smokeSFX);
 		}
 
 		private static void PlayClip(AudioClip clip)
@@ -99,11 +96,6 @@ namespace Stuart
 			if (clip == null) return;
 			instance.source.PlayOneShot(clip);
 		}
-
-		public static void StopSmoke()
-		{
-		}
-
 		public void IncorrectItem() => PlayClip(incorrectItemSFX);
 		public void OrderComplete() => PlayClip(orderCompleteSFX);
 

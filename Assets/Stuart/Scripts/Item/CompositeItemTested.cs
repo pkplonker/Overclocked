@@ -8,7 +8,6 @@ namespace Stuart
         public bool isTestPass;
        [SerializeField] private GameObject failedPrefab;
        [SerializeField] private GameObject passedPrefab;
-
        public override GameObject GetPrefab() => isTestPass ? passedPrefab : failedPrefab;
     }
 }

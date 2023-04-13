@@ -16,9 +16,6 @@ namespace Stuart
 				if (currentItem == value) return;
 				currentItem = value;
 				OnItemChanged?.Invoke(currentItem);
-#if UNITY_EDITOR
-				// Debug.Log(value != null ? $"Added {value.objectName} to inventory" : "Removed item from inventory");
-#endif
 			}
 		}
 

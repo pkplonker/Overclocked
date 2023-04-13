@@ -25,6 +25,6 @@ public class AudioController : MonoBehaviour
         GetComponent<AudioSource>().Play();
         Invoke(nameof(PlayRandomMusic), GetComponent<AudioSource>().clip.length);
     }
-    public void PlayClip(AudioClip clip) => source.PlayOneShot(clip);
+    private void PlayClip(AudioClip clip) => source.PlayOneShot(clip);
     public void PlayUI() => PlayClip(uiSound);
 }

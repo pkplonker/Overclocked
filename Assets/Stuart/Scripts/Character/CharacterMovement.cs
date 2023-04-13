@@ -12,17 +12,17 @@ namespace Stuart
 		[SerializeField] private float movementSpeed = 3f;
 		public event Action<Vector3> OnMovementChanged;
 		public bool canMove;
-		private Animator an;
+		private Animator animator;
 		private float lastmoveTime;
+		private static readonly int LastInput = Animator.StringToHash("lastInput");
+		private static readonly int Moving = Animator.StringToHash("moving");
 
-		private void Start()
-		{
-			an = GetComponentInChildren<Animator>();
-		}
+		private void Start()=>animator = GetComponentInChildren<Animator>();
+		
 
 		private void Update()
 		{
-			an.SetFloat("lastInput", Time.time - lastmoveTime);
+			animator.SetFloat(LastInput, Time.time - lastmoveTime);
 			if (!canMove) return;
 			if (Input.GetKey(forwardKey))
 				ApplyMovement(Vector3.forward);
@@ -33,7 +33,7 @@ namespace Stuart
 			else if (Input.GetKey(rightKey))
 				ApplyMovement(Vector3.right);
 			else
-				an.SetBool("moving", false);
+				animator.SetBool(Moving, false);
 		}
 
 		private void ApplyMovement(Vector3 dir)
@@ -42,7 +42,7 @@ namespace Stuart
 			t.rotation = Quaternion.LookRotation(dir);
 			t.position += t.forward * (movementSpeed * Time.deltaTime);
 			OnMovementChanged?.Invoke(dir);
-			an.SetBool("moving", true);
+			animator.SetBool(Moving, true);
 			lastmoveTime = Time.time;
 		}
 	}

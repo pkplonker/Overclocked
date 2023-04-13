@@ -17,10 +17,8 @@ namespace Stuart
 
 		private void OnValidate()
 		{
-#if UNITY_EDITOR
 			if (itemSpot == null)
 				Debug.LogWarning("Missing itemspot");
-#endif
 		}
 
 		protected override void AddItemToBench(Inventory invent)
@@ -47,12 +45,10 @@ namespace Stuart
 
 		private void StopTimer()
 		{
-			if (testTimerCor != null)
-			{
-				StopCoroutine(testTimerCor);
-				OnTestStateChange?.Invoke(currentSpawnedItem,
-					new TestingStateData(TestState.Aborted, GetElapsedTime, testTime));
-			}
+			if (testTimerCor == null) return;
+			StopCoroutine(testTimerCor);
+			OnTestStateChange?.Invoke(currentSpawnedItem,
+				new TestingStateData(TestState.Aborted, GetElapsedTime, testTime));
 		}
 
 		protected override void RemoveItemFromBench(Inventory invent)

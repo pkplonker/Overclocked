@@ -12,12 +12,7 @@ namespace Stuart
 	{
 		private Canvas canvas;
 		private float radius = 1.5f;
-
-		private void Awake()
-		{
-			canvas = GetComponent<Canvas>();
-		}
-
+		private void Awake()=>canvas = GetComponent<Canvas>();
 		private void Update()
 		{
 			canvas.enabled = false;

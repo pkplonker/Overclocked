@@ -6,11 +6,7 @@ namespace Stuart
 	{
 		public override void Interact(Interactor interactor)
 		{
-#if UNITY_EDITOR
-			Debug.Log("Interacted with bench ");
-#endif
 			if (!interactor.TryGetComponent<Inventory>(out var invent)) return;
-
 			RemoveItemFromPlayer(invent);
 		}
 

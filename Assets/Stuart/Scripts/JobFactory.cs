@@ -10,10 +10,9 @@ namespace Stuart
     {
         public List<JobWithTiming> jobs;
         public List<JobWithTiming> jobsSpawned = new();
-        public static event Action OnWin; 
+        public static event Action OnWin;
         public static event Action<JobWithTiming> JobAdded;
         public static event Action<JobWithTiming> JobCompleted;
-        
         private void Start()
         {
             JobBench.OnJobCompleted += OnJobDelivered;

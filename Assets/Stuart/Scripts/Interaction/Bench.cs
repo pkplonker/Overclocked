@@ -37,7 +37,7 @@ namespace Stuart
 			SpawnItem();
 		}
 
-		protected void SpawnItem()
+		private void SpawnItem()
 		{
 			if (currentSpawnedItem != null)
 				Destroy(currentSpawnedItem);
@@ -53,7 +53,7 @@ namespace Stuart
 			SpawnItem();
 		}
 
-		protected virtual void AddItemToPlayerInvent(Inventory invent, ItemBaseSO itemToAdd)
+		protected void AddItemToPlayerInvent(Inventory invent, ItemBaseSO itemToAdd)
 		{
 			if (invent == null) return;
 			if (invent.CurrentItem != null)

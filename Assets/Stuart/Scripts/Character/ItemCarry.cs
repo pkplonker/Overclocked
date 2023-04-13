@@ -14,9 +14,7 @@ namespace Stuart
 
 		private void OnValidate()
 		{
-#if UNITY_EDITOR
 			if (carryTarget == null) Debug.LogWarning("CarryTarget cannot be null");
-#endif
 		}
 
 		private void OnEnable()
@@ -33,12 +31,10 @@ namespace Stuart
 			currentItem = item;
 			if (currentObject != null)
 				Destroy(currentObject);
-			if (currentItem != null)
-			{
-				currentObject = Instantiate(currentItem.GetPrefab(), carryTarget.position,
-					currentItem.GetPrefab().transform.rotation, carryTarget);
-				currentObject.GetComponent<Item>().itemSO = currentItem;
-			}
+			if (currentItem == null) return;
+			currentObject = Instantiate(currentItem.GetPrefab(), carryTarget.position,
+				currentItem.GetPrefab().transform.rotation, carryTarget);
+			currentObject.GetComponent<Item>().itemSO = currentItem;
 		}
 	}
 }

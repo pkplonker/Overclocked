@@ -31,25 +31,19 @@ namespace Stuart
 					CompositeItemTested tp = it as CompositeItemTested;
 					if (required[i].testedPartRequired)
 					{
-						if (tp != null && tp.isTestPass)
-						{
-							// Debug.Log($"Found {required[i].type}");
-							required.RemoveAt(i);
-							break;
-						}
-					}
-					else
-					{
-						//Debug.Log($"Found {required[i].type}");
+						if (tp == null || !tp.isTestPass) continue;
 						required.RemoveAt(i);
 						break;
 					}
+					required.RemoveAt(i);
+					break;
 				}
 			}
 
 			if (required.Count > 0) return;
 			var created = Instantiate(createdItem);
 			foreach (var t in itemsRequired)
+			{
 				foreach (var b in benches)
 				{
 					if (b.CurrentItem == null) continue;
@@ -68,6 +62,7 @@ namespace Stuart
 					b.RemoveItem();
 					break;
 				}
+			}
 
 			bench.AddItemToBench(created);
 		}
