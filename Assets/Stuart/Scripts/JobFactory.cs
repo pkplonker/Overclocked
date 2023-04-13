@@ -12,14 +12,9 @@ namespace Stuart
         public List<JobWithTiming> jobs;
         public static event Action<JobWithTiming> JobAdded;
         public static event Action<JobWithTiming> JobCompleted;
-
-        public JobBench jobBench;
-
-        private void Awake()
-        {
-            jobBench = FindObjectOfType<JobBench>();
-        }
-
+        private JobBench jobBench;
+        private void Awake()=>jobBench = FindObjectOfType<JobBench>();
+        
         private void Start()
         {
             jobBench.OnJobCompleted += OnJobDelivered;
@@ -32,6 +27,7 @@ namespace Stuart
             if (!(elapsed > jobs[0].spawnTime)) return;
             JobAdded?.Invoke(jobs[0]);
             jobs.RemoveAt(0);
+            Debug.Log("Job added");
         }
 
         private void OnJobDelivered(CompositeItemTested item)
