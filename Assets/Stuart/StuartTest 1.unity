@@ -312,7 +312,7 @@ Transform:
   - {fileID: 521487431}
   - {fileID: 426087195}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &85330635
 GameObject:
@@ -1550,7 +1550,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &492989301
 GameObject:
@@ -4121,7 +4121,7 @@ Transform:
   m_Children:
   - {fileID: 1921488441}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1707229663
 PrefabInstance:
@@ -4669,7 +4669,7 @@ PrefabInstance:
     - target: {fileID: 90474272206808722, guid: 6b2628a11509d9e49b53be4c66900cdd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 90474272206808722, guid: 6b2628a11509d9e49b53be4c66900cdd,
         type: 3}
@@ -4847,7 +4847,7 @@ PrefabInstance:
     - target: {fileID: 1591396314370775825, guid: 27c193efa83ad2c42abb36fd92965db3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1591396314370775825, guid: 27c193efa83ad2c42abb36fd92965db3,
         type: 3}
@@ -5045,7 +5045,7 @@ PrefabInstance:
     - target: {fileID: 3044166350447033388, guid: 116a66283922bd54c83cef0468d1770a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3044166350447033388, guid: 116a66283922bd54c83cef0468d1770a,
         type: 3}
@@ -5209,16 +5209,6 @@ PrefabInstance:
     - target: {fileID: 9146609691750298526, guid: 09791ffb139186343b89867c6a3c0e4c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9146609691750298527, guid: 09791ffb139186343b89867c6a3c0e4c,
-        type: 3}
-      propertyPath: gameStartCountdown
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9146609691750298527, guid: 09791ffb139186343b89867c6a3c0e4c,
-        type: 3}
-      propertyPath: gameStartInitialDelay
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -13,12 +13,10 @@ namespace Stuart
         public static event Action OnWin; 
         public static event Action<JobWithTiming> JobAdded;
         public static event Action<JobWithTiming> JobCompleted;
-        private JobBench jobBench;
-        private void Awake()=>jobBench = FindObjectOfType<JobBench>();
         
         private void Start()
         {
-            jobBench.OnJobCompleted += OnJobDelivered;
+            JobBench.OnJobCompleted += OnJobDelivered;
             GameController.Instance.OnGameTick += GameTick;
         }
 
@@ -32,7 +30,7 @@ namespace Stuart
             Debug.Log("Job added");
         }
 
-        private void OnJobDelivered(CompositeItemTested item)
+        private void OnJobDelivered(Transform t, CompositeItemTested item)
         {
             Debug.Log("Job completed");
             JobWithTiming? completedJob = null;

@@ -20,6 +20,8 @@ namespace Stuart
 		[SerializeField] private AudioClip orderCompleteSFX;
 		[SerializeField] private AudioClip orderFailSFX;
 		[SerializeField] private AudioClip incorrectItemSFX;
+		[SerializeField] private ParticleSystem sellVFX;
+		[SerializeField] private AudioClip sellSFX;
 
 		private static ParticleSystem smokeVFX1;
 		private AudioSource source;
@@ -36,7 +38,15 @@ namespace Stuart
 			}
 
 			smokeVFX1 = smokeVFX;
+			JobBench.OnJobCompleted += JobCompleted;
 		}
+
+		private void JobCompleted(Transform t, CompositeItemTested obj)
+		{
+			PlayClip(sellSFX);
+			Instantiate(sellVFX, t);
+		}
+		
 
 		private void TestStateChange(GameObject go, TestingStateData args)
 		{

@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adaf550732b1d394a8c999988682df5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStartInitialDelay: 1
-  gameStartCountdown: 3
+  gameStartInitialDelay: 0
+  gameStartCountdown: 0
   gameTimeSeconds: 180
   pauseKey: 112
 --- !u!114 &9146609691750298521
@@ -104,6 +104,8 @@ MonoBehaviour:
   orderCompleteSFX: {fileID: 8300000, guid: f887a8ece6543ac4fb7f78d440cd1a18, type: 3}
   orderFailSFX: {fileID: 8300000, guid: c29b83d9ddcc22a42872aee9e02ebb21, type: 3}
   incorrectItemSFX: {fileID: 8300000, guid: 31e7e75648bb4464d9c0910154480a57, type: 3}
+  sellVFX: {fileID: 9130591496621877445, guid: 516726ac70b07e849bbd0b9a0c1e6ab9, type: 3}
+  sellSFX: {fileID: 8300000, guid: 5ee8f08b45f40194da0ce3d7ffa350d8, type: 3}
 --- !u!82 &3395397615202030039
 AudioSource:
   m_ObjectHideFlags: 0

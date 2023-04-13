@@ -8,7 +8,7 @@ namespace Stuart
 {
     public class JobBench : BinBench
     {
-        public event Action<CompositeItemTested> OnJobCompleted;
+        public static event Action<Transform, CompositeItemTested> OnJobCompleted;
         public override void Interact(Interactor interactor)
         {
             if (!interactor.TryGetComponent<Inventory>(out var invent)) return;
@@ -23,7 +23,7 @@ namespace Stuart
             if (!comp.isTestPass) return;
             invent.RemoveItem();
             Debug.Log("Final assembly added to job bench");
-            OnJobCompleted?.Invoke(comp);
+            OnJobCompleted?.Invoke(transform,comp);
             FXController.instance.OrderComplete();
 
         }
