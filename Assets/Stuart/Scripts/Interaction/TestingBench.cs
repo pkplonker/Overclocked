@@ -25,16 +25,24 @@ namespace Stuart
 
 		protected override void AddItemToBench(Inventory invent)
 		{
-			base.AddItemToBench(invent);
-			TestTimer();
+			if (invent.CurrentItem != null)
+			{
+				var tested = invent.CurrentItem as CompositeItemTested;
+				if (invent.CurrentItem.type == requiredItemType && tested == null)
+				{
+					base.AddItemToBench(invent);
+					TestTimer();
+				}
+				else
+					FXController.instance.IncorrectItem();
+			}
+			else FXController.instance.IncorrectItem();
 		}
 
 		private void TestTimer()
 		{
 			StopTimer();
-			var tested = CurrentItem as CompositeItemTested;
-			if (CurrentItem.type == requiredItemType && tested == null)
-				testTimerCor = StartCoroutine(TestTimerCoroutine());
+			testTimerCor = StartCoroutine(TestTimerCoroutine());
 		}
 
 		private void StopTimer()

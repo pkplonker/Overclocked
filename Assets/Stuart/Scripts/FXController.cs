@@ -19,6 +19,7 @@ namespace Stuart
 		[SerializeField] private AudioClip smokeSFX;
 		[SerializeField] private AudioClip orderCompleteSFX;
 		[SerializeField] private AudioClip orderFailSFX;
+		[SerializeField] private AudioClip incorrectItemSFX;
 
 		private static ParticleSystem smokeVFX1;
 		private AudioSource source;
@@ -80,7 +81,7 @@ namespace Stuart
 		public static void SpawnFail(Transform t)
 		{
 			SpawnVFX(t.gameObject, smokeVFX1);
-			PlayClip(instance.smokeSFX);
+			//PlayClip(instance.smokeSFX);
 		}
 
 		private static void PlayClip(AudioClip clip)
@@ -93,6 +94,7 @@ namespace Stuart
 		{
 		}
 
+		public void IncorrectItem() => PlayClip(incorrectItemSFX);
 		public void OrderComplete() => PlayClip(orderCompleteSFX);
 
 		public void OrderFail() => PlayClip(orderFailSFX);

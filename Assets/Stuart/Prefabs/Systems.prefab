@@ -103,6 +103,7 @@ MonoBehaviour:
   smokeSFX: {fileID: 8300000, guid: eba9bfbfc14e41d4c9e24ea8fb430d33, type: 3}
   orderCompleteSFX: {fileID: 8300000, guid: f887a8ece6543ac4fb7f78d440cd1a18, type: 3}
   orderFailSFX: {fileID: 8300000, guid: c29b83d9ddcc22a42872aee9e02ebb21, type: 3}
+  incorrectItemSFX: {fileID: 8300000, guid: 31e7e75648bb4464d9c0910154480a57, type: 3}
 --- !u!82 &3395397615202030039
 AudioSource:
   m_ObjectHideFlags: 0
