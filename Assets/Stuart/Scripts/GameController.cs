@@ -41,6 +41,7 @@ namespace Stuart
             countdown = 0f;
             while (countdown < gameStartCountdown)
             {
+              
                 countdown += Time.deltaTime;
                 OnGameStartTimerTick?.Invoke(gameStartCountdown - countdown);
                 yield return null;
@@ -70,6 +71,7 @@ namespace Stuart
 #if UNITY_EDITOR
             Debug.Log("Game Start");
 #endif
+            
             OnGameStart?.Invoke();
             StartCoroutine(GameTick());
         }
@@ -79,8 +81,10 @@ namespace Stuart
             var countdown = 0f;
             while (countdown < gameTimeSeconds)
             {
-                countdown += Time.deltaTime;
-                OnGameTick?.Invoke(countdown,gameTimeSeconds);
+                if (!isPaused) {
+                    countdown += Time.deltaTime;
+                    OnGameTick?.Invoke(countdown,gameTimeSeconds);
+                }
                 yield return null;
             }
             SetGameOver();

@@ -11,7 +11,7 @@ namespace Stuart
         private Coroutine testTimerCor;
         [SerializeField] private float testTime=5f;
         [SerializeField] private float allowedTime=4f;
-        public event Action<Transform, TestingStateData> OnTestStateChange;
+        public event Action<GameObject, TestingStateData> OnTestStateChange;
         private float countdown = 0f;
         private void OnValidate()
         {
@@ -39,7 +39,7 @@ namespace Stuart
             if (testTimerCor != null)
             {
                 StopCoroutine(testTimerCor);
-                OnTestStateChange?.Invoke(itemSpot,new TestingStateData(TestState.Aborted,GetElapsedTime,testTime));
+                OnTestStateChange?.Invoke(currentSpawnedItem,new TestingStateData(TestState.Aborted,GetElapsedTime,testTime));
             }
             
         }
@@ -51,7 +51,7 @@ namespace Stuart
         }
         private IEnumerator TestTimerCoroutine()
         {
-            OnTestStateChange?.Invoke(itemSpot, new TestingStateData(TestState.Started,GetElapsedTime,testTime));
+            OnTestStateChange?.Invoke(currentSpawnedItem, new TestingStateData(TestState.Started,GetElapsedTime,testTime));
             var cachedItem = CurrentItem;
             countdown = 0f;
             while(countdown < testTime)
@@ -64,7 +64,7 @@ namespace Stuart
             AddItemToBench(CreateTestedItem(cachedItem,createdItem, true));
             Debug.Log("TestingComplete");
             countdown = 0f;
-            OnTestStateChange?.Invoke(itemSpot, new TestingStateData(TestState.Complete,GetElapsedTime,allowedTime));
+            OnTestStateChange?.Invoke(currentSpawnedItem, new TestingStateData(TestState.Complete,GetElapsedTime,allowedTime));
             while(countdown < allowedTime)
             {
                 countdown += Time.deltaTime;
@@ -74,7 +74,7 @@ namespace Stuart
             
             AddItemToBench(CreateTestedItem(cachedItem,createdItem, false));
             Debug.Log("Testing Failed");
-            OnTestStateChange?.Invoke(itemSpot, new TestingStateData(TestState.Failed,GetElapsedTime,allowedTime));
+            OnTestStateChange?.Invoke(currentSpawnedItem, new TestingStateData(TestState.Failed,GetElapsedTime,allowedTime));
             testTimerCor = null;
         }
 

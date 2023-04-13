@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2616,8 +2616,8 @@ MonoBehaviour:
   itemSpot: {fileID: 1755743505}
   requiredItemType: 7
   createdItem: {fileID: 11400000, guid: dce6a4197fb983e47a7e5ee974b850af, type: 2}
-  testTime: 2
-  allowedTime: 20
+  testTime: 5
+  allowedTime: 3
 --- !u!65 &1092443580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4531,6 +4531,7 @@ GameObject:
   - component: {fileID: 1682307427}
   - component: {fileID: 1682307426}
   - component: {fileID: 1682307428}
+  - component: {fileID: 1682307429}
   m_Layer: 0
   m_Name: Systems
   m_TagString: Untagged
@@ -4584,17 +4585,35 @@ MonoBehaviour:
   jobs:
   - job: {fileID: 11400000, guid: df5c268eb871cb74ebf47f230b56925b, type: 2}
     spawnTime: 0.1
-    value: 0
+    value: 885
   - job: {fileID: 11400000, guid: 57f96b5eeeed9ee4c8c6c163c0eefc2f, type: 2}
     spawnTime: 5
-    value: 0
+    value: 1140
   - job: {fileID: 11400000, guid: b386bd7937727494198f0549a3ed4c80, type: 2}
     spawnTime: 60
-    value: 0
+    value: 999
   - job: {fileID: 11400000, guid: a7d6157b6e73f6a4bba479a459d1d3fd, type: 2}
     spawnTime: 90
-    value: 0
+    value: 1250
   jobsSpawned: []
+--- !u!114 &1682307429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682307425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2203c05c8a696f43b22121a86fa7bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TestSuccessVFX: {fileID: 2968644208522911067, guid: e49e504683034ae4481555e5e343e018,
+    type: 3}
+  TestStartVFX: {fileID: 5047179115994829643, guid: a959e445ffb8eb74db7e760bb8d40ae2,
+    type: 3}
+  TestFailVFX: {fileID: 7247584653966623466, guid: 80d07d26197e95e49ae181d155da9e49,
+    type: 3}
 --- !u!1 &1693670526
 GameObject:
   m_ObjectHideFlags: 0
