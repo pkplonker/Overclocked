@@ -8661,6 +8661,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 633451690526530962, guid: eea8611c645677646a0289558a3c1e4b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuButtonLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 633451690663905663, guid: eea8611c645677646a0289558a3c1e4b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eea8611c645677646a0289558a3c1e4b, type: 3}
 --- !u!4 &888658058 stripped
