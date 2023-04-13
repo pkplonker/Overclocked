@@ -10,9 +10,16 @@ public class vfxtest : MonoBehaviour
     [SerializeField] GameObject sparkle;
     [SerializeField] GameObject firework;
 
+    AudioSource source;
+    [SerializeField] AudioClip sparkleClip;
+    [SerializeField] AudioClip boomClip;
+    [SerializeField] AudioClip sparkClip;
+    [SerializeField] AudioClip fireworkClip;
+
     private void Start()
     {
         spark.SetActive(false);
+        source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -20,19 +27,23 @@ public class vfxtest : MonoBehaviour
         if (Input.GetKeyDown("1"))
         {
             StartCoroutine(Spark());
+            source.PlayOneShot(sparkClip);
         }
         if (Input.GetKeyDown("2"))
         {
             Instantiate(sparkle, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity, transform);
+            source.PlayOneShot(sparkleClip);
         }
         if (Input.GetKeyDown("3"))
         {
             Instantiate(boom, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity, transform);
             Instantiate(smoke, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity, transform);
+            source.PlayOneShot(boomClip);
         }
         if (Input.GetKeyDown("4"))
         {
             Instantiate(firework, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity, transform);
+            source.PlayOneShot(fireworkClip);
         }
     }
 
