@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Sam/Scenes/Menu.unity
     guid: eb7574b480b68b7458546ed5a90617a4
   - enabled: 1
-    path: Assets/Sam/Scenes/StuartTestSam.unity
-    guid: 8bed3a59adadc67439f06fee27ea91b1
+    path: Assets/Alex/Level_1.unity
+    guid: cc2aebccd36370c49952fa0503aa9362
+  - enabled: 1
+    path: Assets/Alex/Level_2.unity
+    guid: 3816479223468a44ca41733ad0bbbbdd
   m_configObjects: {}

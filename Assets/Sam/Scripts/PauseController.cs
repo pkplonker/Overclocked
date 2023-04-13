@@ -50,10 +50,11 @@ public class PauseController : MonoBehaviour
         Application.Quit();
     }
 
-    public void MainMenuButton()
+    public void MainMenuButtonLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("Menu");
     }
+
     public void Continue()
     {
         

@@ -10,6 +10,21 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void Level1()
+    {
+        SceneManager.LoadScene("Level_1");
+    }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene("Level_2");
+    }
+
+    public void level3()
+    {
+        SceneManager.LoadScene("Level_3");
+    }
+
     public void EndGame()
     {
         Debug.Log("Quit");
