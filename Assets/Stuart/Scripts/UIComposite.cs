@@ -31,7 +31,7 @@ namespace Stuart
 
 		private string UpdateText(ItemBaseSO item)
 		{
-			var s = "<mark=#00000090>";
+			var s = "<mark=#00000000>";
 			var thisItem = item as CompositeItem;
 			if (thisItem == null)
 			{
