@@ -30,7 +30,8 @@ namespace Stuart
         private void TestTimer()
         {
             StopTimer();
-            if(CurrentItem.type ==requiredItemType)
+            var tested = CurrentItem as CompositeItemTested;
+            if(CurrentItem.type ==requiredItemType && tested==null)
                 testTimerCor = StartCoroutine(TestTimerCoroutine());
         }
 
