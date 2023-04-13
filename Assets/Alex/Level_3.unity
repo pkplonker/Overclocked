@@ -10243,6 +10243,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: cd11ae220c1c0f846823fa667f22be64,
         type: 2}
+    - target: {fileID: 1336969889039102058, guid: 5df18503dcf00cb4793ca1c9f283985d,
+        type: 3}
+      propertyPath: m_text
+      value: 4TB
+      objectReference: {fileID: 0}
     - target: {fileID: 1598574228562742704, guid: 5df18503dcf00cb4793ca1c9f283985d,
         type: 3}
       propertyPath: m_Name
@@ -12623,6 +12628,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 672331008}
     m_Modifications:
+    - target: {fileID: 950939061, guid: 4682869dc35a7af48bc5d0a1d069ca4e, type: 3}
+      propertyPath: m_text
+      value: '32
+
+        GB'
+      objectReference: {fileID: 0}
     - target: {fileID: 1026217566, guid: 4682869dc35a7af48bc5d0a1d069ca4e, type: 3}
       propertyPath: currentItem
       value: 
