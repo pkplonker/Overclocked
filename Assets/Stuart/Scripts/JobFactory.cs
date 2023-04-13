@@ -51,7 +51,12 @@ namespace Stuart
                     }
                 }
             }
-            if (completedJob == null) return;
+
+            if (completedJob == null)
+            {
+                FXController.instance.OrderFail();
+                return;
+            }
             JobCompleted?.Invoke((JobWithTiming)completedJob);
             Debug.Log("Validated job complete");
             CheckWin();

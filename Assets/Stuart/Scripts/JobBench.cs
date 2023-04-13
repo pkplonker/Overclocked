@@ -24,6 +24,7 @@ namespace Stuart
             invent.RemoveItem();
             Debug.Log("Final assembly added to job bench");
             OnJobCompleted?.Invoke(comp);
+            FXController.instance.OrderComplete();
 
         }
     }

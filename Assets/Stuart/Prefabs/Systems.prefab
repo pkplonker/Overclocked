@@ -101,6 +101,7 @@ MonoBehaviour:
   TestStartSFX: {fileID: 0}
   TestFailSFX: {fileID: 8300000, guid: 2573f47b133dd9245a02286ea6747735, type: 3}
   smokeSFX: {fileID: 8300000, guid: b7d33592fe0bd8a4db40150b2d509787, type: 3}
+  orderCompleteSFX: {fileID: 8300000, guid: f887a8ece6543ac4fb7f78d440cd1a18, type: 3}
 --- !u!82 &3395397615202030039
 AudioSource:
   m_ObjectHideFlags: 0

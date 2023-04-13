@@ -20,9 +20,12 @@ namespace Stuart
         [SerializeField] private AudioClip TestStartSFX;
         [SerializeField] private AudioClip TestFailSFX;
         [SerializeField] private AudioClip smokeSFX;
+        [SerializeField] private AudioClip orderCompleteSFX;
+        [SerializeField] private AudioClip orderFailSFX;
+
         private static ParticleSystem smokeVFX1;
         private AudioSource source;
-        private static FXController instance;
+        public static FXController instance;
         private void Start()
         {
             instance = this;
@@ -91,5 +94,10 @@ namespace Stuart
         {
             
         }
+
+        public void OrderComplete() => PlayClip(orderCompleteSFX);
+
+        public void OrderFail()=> PlayClip(orderFailSFX);
+
     }
 }

@@ -10,13 +10,23 @@ namespace Stuart
 	{
 		private TextMeshProUGUI tmp;
 		private void Awake() => tmp = GetComponent<TextMeshProUGUI>();
-
+		private int previous = 99;
 		private void Start()
 		{
 			GameController.Instance.OnGameStartTimerTick += GameTick;
 			GameController.Instance.OnGameStart += ()=>Destroy(gameObject);
 		}
-		private void GameTick(float timer)=>tmp.text = string.Format($"{TimeSpan.FromSeconds(timer).Seconds}");
+
+		private void GameTick(float timer)
+		{
+			var val =TimeSpan.FromSeconds(timer).Seconds;
+			if (val != previous)
+			{
+				previous = val;
+				FXController.instance.OrderFail();
+			}
+			tmp.text = val.ToString();
+		}
 		
 		
 	}
