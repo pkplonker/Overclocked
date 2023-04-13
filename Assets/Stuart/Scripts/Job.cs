@@ -17,5 +17,8 @@ namespace Stuart
     {
         public Job job;
         public float spawnTime;
+        public static bool operator ==(JobWithTiming c1, JobWithTiming c2)=>(c1.job == c2.job);
+        public static bool operator !=(JobWithTiming c1, JobWithTiming c2) =>(c1.job != c2.job);
+        
     }
 }
