@@ -20,6 +20,7 @@ namespace Stuart
                 invent.CurrentItem.type != ItemType.FinalAssembly) return;
             var comp = invent.CurrentItem as CompositeItemTested;
             if (comp == null) return;
+            if (!comp.isTestPass) return;
             invent.RemoveItem();
             Debug.Log("Final assembly added to job bench");
             OnJobCompleted?.Invoke(comp);
