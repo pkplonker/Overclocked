@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 namespace Stuart
 {
-	public class ButtonHoverEffectScale : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+	public class ButtonHoverEffectScale : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 	{
 		[SerializeField] private float scaleAmount = 1.1f;
 		[SerializeField] private float scaleDuration = 0.2f;
@@ -15,5 +15,9 @@ namespace Stuart
 		private void Hover() => transform.DOScale(Vector3.one * scaleAmount, scaleDuration);
 		public void OnPointerExit(PointerEventData eventData) => UnHover();
 		private void UnHover() => transform.DOScale(Vector3.one, scaleDuration);
+		public void OnPointerClick(PointerEventData eventData)
+		{
+			if(AudioController.Instance!=null && eventData.button== PointerEventData.InputButton.Left) AudioController.Instance.PlayUI();
+		}
 	}
 }
