@@ -13,7 +13,7 @@ public class vfxtest : MonoBehaviour
     AudioSource source;
     [SerializeField] AudioClip sparkleClip;
     [SerializeField] AudioClip boomClip;
-    [SerializeField] AudioClip sparkClip;
+    [SerializeField] AudioSource welder;
     [SerializeField] AudioClip fireworkClip;
 
     private void Start()
@@ -27,7 +27,7 @@ public class vfxtest : MonoBehaviour
         if (Input.GetKeyDown("1"))
         {
             StartCoroutine(Spark());
-            source.PlayOneShot(sparkClip);
+            welder.Play();
         }
         if (Input.GetKeyDown("2"))
         {
@@ -52,5 +52,6 @@ public class vfxtest : MonoBehaviour
         spark.SetActive(true);
         yield return new WaitForSeconds(5f);
         spark.SetActive(false);
+        welder.Stop();
     }
 }
