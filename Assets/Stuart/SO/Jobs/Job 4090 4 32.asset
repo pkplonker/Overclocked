@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc8d6b76c32f7e0478b0ba0c17c3c560, type: 3}
+  m_Name: Job 4090 4 32
+  m_EditorClassIdentifier: 
+  requiredItems:
+  - {fileID: 11400000, guid: f1e18e5a21622a34488ba89f9e1a077c, type: 2}
+  - {fileID: 11400000, guid: cd11ae220c1c0f846823fa667f22be64, type: 2}
+  - {fileID: 11400000, guid: 8e32f983ed4ef3a44853d744546f4e6c, type: 2}
