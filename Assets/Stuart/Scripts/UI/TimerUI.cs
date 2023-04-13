@@ -6,8 +6,6 @@ using UnityEngine;
 
 namespace Stuart
 {
-
-
     public class TimerUI : MonoBehaviour
     {
         private TextMeshProUGUI tmp;

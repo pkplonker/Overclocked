@@ -5,8 +5,6 @@ using UnityEngine;
 
 namespace Stuart
 {
-
-
     [CreateAssetMenu(fileName = "Job", menuName = "SO/Jobs/Basic")]
     public class Job : ScriptableObject
     {

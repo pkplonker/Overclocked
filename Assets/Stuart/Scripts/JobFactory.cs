@@ -6,7 +6,6 @@ using UnityEngine;
 
 namespace Stuart
 {
-
     public class JobFactory : MonoBehaviour
     {
         public List<JobWithTiming> jobs;

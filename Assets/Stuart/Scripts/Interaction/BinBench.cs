@@ -2,23 +2,22 @@ using UnityEngine;
 
 namespace Stuart
 {
-    public class BinBench : Bench
-    {
-        public override void Interact(Interactor interactor)
-        {
+	public class BinBench : Bench
+	{
+		public override void Interact(Interactor interactor)
+		{
 #if UNITY_EDITOR
-            Debug.Log("Interacted with bench ");
+			Debug.Log("Interacted with bench ");
 #endif
-            if (!interactor.TryGetComponent<Inventory>(out var invent)) return;
-            
-                RemoveItemFromPlayer(invent);
-            
-        }
+			if (!interactor.TryGetComponent<Inventory>(out var invent)) return;
 
-        private void RemoveItemFromPlayer(Inventory invent)
-        {
-            if (invent != null && invent.CurrentItem != null)
-                invent.RemoveItem();
-        }
-    }
+			RemoveItemFromPlayer(invent);
+		}
+
+		private void RemoveItemFromPlayer(Inventory invent)
+		{
+			if (invent != null && invent.CurrentItem != null)
+				invent.RemoveItem();
+		}
+	}
 }
