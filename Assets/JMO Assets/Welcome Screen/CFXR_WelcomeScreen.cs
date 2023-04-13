@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 
 namespace CartoonFX
 {
+    #if UNITY_EDITOR
     [InitializeOnLoad]
     public class CFXR_WelcomeScreen : EditorWindow
     {
@@ -73,4 +74,5 @@ namespace CartoonFX
             root.Q<Button>("close").RegisterCallback<ClickEvent>(evt => { this.Close(); });
         }
     }
+    #endif
 }

@@ -36,6 +36,7 @@ namespace Stuart
          var go = Instantiate(jobUISlotPrefab,container);
          go.Init(job);
          spawnedUI.Add(go);
+         FXController.instance.OrderFail();
       }
    }
 }

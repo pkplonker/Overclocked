@@ -28,9 +28,7 @@ namespace Stuart
 				transform.localScale = Vector3.zero;
 				transform.DOScale(Vector3.one , 0.3f).SetEase(Ease.Flash);
 			}
-			tmp.text = val.ToString();
+			tmp.text = (val+1).ToString();
 		}
-		
-		
 	}
 }
