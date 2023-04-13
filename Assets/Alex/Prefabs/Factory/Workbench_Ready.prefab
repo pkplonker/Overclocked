@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  itemSpot: {fileID: 4321055441125771428}
+  itemSpot: {fileID: 0}
 --- !u!1 &6295248175064792083
 GameObject:
   m_ObjectHideFlags: 0
