@@ -27,7 +27,7 @@ namespace Stuart
                 foreach (var it in currentItems)
                 {
                     if (it == null) continue;
-                    if (required[i].type != it.type || required[i].value != it.value) continue;
+                    if (required[i].type != it.type ) continue;
                     CompositeItemTested tp = it as CompositeItemTested;
                     if (required[i].testedPartRequired)
                     {
