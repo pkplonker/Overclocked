@@ -2818,7 +2818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a21bd60b7a4b604ca31aac0e31678e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentItem: {fileID: 11400000, guid: b065aeef496e16d4584ecd82519dcc14, type: 2}
+  currentItem: {fileID: 11400000, guid: 8e32f983ed4ef3a44853d744546f4e6c, type: 2}
   itemSpot: {fileID: 0}
 --- !u!1 &1132290289
 GameObject:
@@ -4613,6 +4613,8 @@ MonoBehaviour:
   TestStartVFX: {fileID: 5047179115994829643, guid: a959e445ffb8eb74db7e760bb8d40ae2,
     type: 3}
   TestFailVFX: {fileID: 7247584653966623466, guid: 80d07d26197e95e49ae181d155da9e49,
+    type: 3}
+  smokeVFX: {fileID: 8972010570835228099, guid: ad914116e0e0eaa4590e6c1956667e1c,
     type: 3}
 --- !u!1 &1693670526
 GameObject:

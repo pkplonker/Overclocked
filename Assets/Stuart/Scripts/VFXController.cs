@@ -15,6 +15,8 @@ namespace Stuart
         [SerializeField] private ParticleSystem TestSuccessVFX;
         [SerializeField] private ParticleSystem TestStartVFX;
         [SerializeField] private ParticleSystem TestFailVFX;
+        [SerializeField] private ParticleSystem smokeVFX;
+         private static ParticleSystem smokeVFX1;
 
         private void Start()
         {
@@ -23,6 +25,8 @@ namespace Stuart
             {
                 tb.OnTestStateChange += TestStateChange;
             }
+
+            smokeVFX1 = smokeVFX;
         }
 
         private void TestStateChange(GameObject go, TestingStateData args)
@@ -59,7 +63,11 @@ namespace Stuart
             SpawnVFX(go,TestFailVFX);
         }
 
-        private void SpawnVFX(GameObject go,ParticleSystem VFX)=>Instantiate(VFX, go.transform);
-        
+        private static void SpawnVFX(GameObject go,ParticleSystem VFX)=>Instantiate(VFX, go.transform);
+
+        public static void SpawnFail(Transform t)
+        {
+            SpawnVFX(t.gameObject,smokeVFX1);
+        }
     }
 }
