@@ -11,7 +11,7 @@ namespace Stuart
     {
         public List<JobWithTiming> jobs;
         public List<JobWithTiming> jobsSpawned = new();
-
+        public static event Action OnWin; 
         public static event Action<JobWithTiming> JobAdded;
         public static event Action<JobWithTiming> JobCompleted;
         private JobBench jobBench;
@@ -54,6 +54,12 @@ namespace Stuart
             if (completedJob == null) return;
             JobCompleted?.Invoke((JobWithTiming)completedJob);
             Debug.Log("Validated job complete");
+            CheckWin();
+        }
+
+        private void CheckWin()
+        {
+            if (jobs.Count == 0 && jobsSpawned.Count == 0) OnWin?.Invoke();
         }
     }
 }

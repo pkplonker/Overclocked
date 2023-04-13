@@ -18,7 +18,7 @@ namespace Stuart
         public event Action<bool> OnPauseChanged;
         public event Action<float> OnGameStartTimerTick;
         public event Action<float,float> OnGameTick;
-        public event Action OnGameOver;
+        public event Action<bool> OnGameOver;
         public event Action OnGameStart;
         private void Awake()
         {
@@ -83,7 +83,6 @@ namespace Stuart
                 OnGameTick?.Invoke(countdown,gameTimeSeconds);
                 yield return null;
             }
-
             SetGameOver();
         }
 
@@ -93,7 +92,7 @@ namespace Stuart
             Debug.Log("GameOver");
 #endif
             SetPlayerMovement(false);
-            OnGameOver?.Invoke();
+            OnGameOver?.Invoke(false);
         }
 
         private void SetPlayerMovement(bool canMove)
