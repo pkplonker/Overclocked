@@ -53,7 +53,7 @@ namespace Stuart
             foreach (var b in benches)
             {
                 if (b.CurrentItem == null) continue;
-                if (b.CurrentItem.type != t.type || b.CurrentItem.value != t.value) continue;
+                if (b.CurrentItem.type != t.type) continue;
                 CompositeItem compositeItem = b.CurrentItem as CompositeItem;
                 if (compositeItem != null)
                 {
