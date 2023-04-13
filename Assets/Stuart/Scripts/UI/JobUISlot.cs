@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Stuart;
 using TMPro;
 using UnityEngine;
@@ -13,6 +14,8 @@ namespace Stuart
 
         public void Init(JobWithTiming job)
         {
+            transform.localScale = Vector3.zero;
+            transform.DOScale(Vector3.one , 0.3f).SetEase(Ease.Flash);
             this.job = job;
             foreach (var item in job.job.requiredItems)
             {

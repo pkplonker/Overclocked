@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -24,6 +25,8 @@ namespace Stuart
 			{
 				previous = val;
 				FXController.instance.OrderFail();
+				transform.localScale = Vector3.zero;
+				transform.DOScale(Vector3.one , 0.3f).SetEase(Ease.Flash);
 			}
 			tmp.text = val.ToString();
 		}

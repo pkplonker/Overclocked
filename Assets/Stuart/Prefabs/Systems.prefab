@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adaf550732b1d394a8c999988682df5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStartInitialDelay: 0
-  gameStartCountdown: 0
+  gameStartInitialDelay: 1
+  gameStartCountdown: 3
   gameTimeSeconds: 180
-  pauseKey: 27
+  pauseKey: 112
 --- !u!114 &9146609691750298521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,10 +71,10 @@ MonoBehaviour:
     spawnTime: 5
     value: 1140
   - job: {fileID: 11400000, guid: b386bd7937727494198f0549a3ed4c80, type: 2}
-    spawnTime: 60
+    spawnTime: 8
     value: 999
   - job: {fileID: 11400000, guid: a7d6157b6e73f6a4bba479a459d1d3fd, type: 2}
-    spawnTime: 90
+    spawnTime: 10
     value: 1250
   jobsSpawned: []
 --- !u!114 &9146609691750298520
@@ -100,8 +100,9 @@ MonoBehaviour:
   TestSuccessSFX: {fileID: 8300000, guid: 61f87a90832c4a545aedaa45b40a6a64, type: 3}
   TestStartSFX: {fileID: 0}
   TestFailSFX: {fileID: 8300000, guid: 2573f47b133dd9245a02286ea6747735, type: 3}
-  smokeSFX: {fileID: 8300000, guid: b7d33592fe0bd8a4db40150b2d509787, type: 3}
+  smokeSFX: {fileID: 8300000, guid: eba9bfbfc14e41d4c9e24ea8fb430d33, type: 3}
   orderCompleteSFX: {fileID: 8300000, guid: f887a8ece6543ac4fb7f78d440cd1a18, type: 3}
+  orderFailSFX: {fileID: 8300000, guid: c29b83d9ddcc22a42872aee9e02ebb21, type: 3}
 --- !u!82 &3395397615202030039
 AudioSource:
   m_ObjectHideFlags: 0
