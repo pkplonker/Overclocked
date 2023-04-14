@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3395397615202030039}
   m_Layer: 0
   m_Name: Systems
-  m_TagString: Untagged
+  m_TagString: fx
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adaf550732b1d394a8c999988682df5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStartInitialDelay: 0
-  gameStartCountdown: 0
+  gameStartInitialDelay: 1
+  gameStartCountdown: 3
   gameTimeSeconds: 180
   pauseKey: 112
 --- !u!114 &9146609691750298521
@@ -115,7 +115,8 @@ AudioSource:
   m_GameObject: {fileID: 9146609691750298524}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6237006181036241631, guid: a588a7b5670929c4e872861273d926fd,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
