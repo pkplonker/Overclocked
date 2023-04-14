@@ -13,10 +13,13 @@ namespace Stuart
         public static event Action OnWin;
         public static event Action<JobWithTiming> JobAdded;
         public static event Action<JobWithTiming> JobCompleted;
+        private int jobsComplete = 0;
+        private int jobsRequired = 0;
         private void Start()
         {
             JobBench.OnJobCompleted += OnJobDelivered;
             GameController.Instance.OnGameTick += GameTick;
+            jobsRequired = jobs.Count;
         }
 
         private void GameTick(float elapsed, float totalLevelTime)
@@ -53,6 +56,8 @@ namespace Stuart
                 FXController.instance.OrderFail();
                 return;
             }
+
+            jobsComplete++;
             JobCompleted?.Invoke((JobWithTiming)completedJob);
             Debug.Log("Validated job complete");
             CheckWin();
@@ -60,7 +65,11 @@ namespace Stuart
 
         private void CheckWin()
         {
-            if (jobs.Count == 0 && jobsSpawned.Count == 0) OnWin?.Invoke();
+            if (jobsComplete == jobsRequired)
+            {
+                OnWin?.Invoke();
+                Debug.Log("All jobs complete");
+            }
         }
     }
 }
