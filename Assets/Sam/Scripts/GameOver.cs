@@ -1,10 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Stuart;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    [SerializeField] private GameObject winScreen;
+    [SerializeField] private GameObject loseScreen;
+
+    private void Start()
+    {
+        GameController.Instance.OnGameOver += (_)=>loseScreen.SetActive(true);
+        JobFactory.OnWin += ()=>winScreen.SetActive(true);
+
+    }
+
     public void ReturnToMainMenu()
     {
         SceneManager.LoadScene("Menu");
