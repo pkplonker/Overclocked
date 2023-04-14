@@ -21,6 +21,7 @@ namespace Stuart
 			JobComplete(new JobWithTiming());
 		}
 
+		private void OnDisable()=>JobFactory.JobCompleted -= JobComplete;
 		private void JobComplete(JobWithTiming job)
 		{
 			targetAmount += job.value;

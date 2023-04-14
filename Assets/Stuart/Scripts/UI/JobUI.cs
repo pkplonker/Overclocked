@@ -20,7 +20,12 @@ namespace Stuart
 		}
 
 		private void OnValidate()=>canvas = GetComponent<Canvas>();
-		
+
+		private void OnDisable()
+		{
+			JobFactory.JobAdded -= SpawnJob;
+			JobFactory.JobCompleted -= JobComplete;
+		}
 
 		private void JobComplete(JobWithTiming job)
 		{
