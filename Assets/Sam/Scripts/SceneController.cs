@@ -25,6 +25,21 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Level_3");
     }
 
+    public void level4()
+    {
+        SceneManager.LoadScene("Level_4");
+    }
+
+    public void level5()
+    {
+        SceneManager.LoadScene("Level_5");
+    }
+
+    public void level6()
+    {
+        SceneManager.LoadScene("Level_6");
+    }
+
     public void EndGame()
     {
         Debug.Log("Quit");

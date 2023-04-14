@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Alex/Level_2.unity
     guid: 3816479223468a44ca41733ad0bbbbdd
+  - enabled: 1
+    path: Assets/Alex/Level_3.unity
+    guid: 073a1c2f15d65864b90b8c27fd9b011b
+  - enabled: 1
+    path: Assets/Alex/Level_4.unity
+    guid: 4d67494780244f4469a2bfca6231e3ed
+  - enabled: 1
+    path: Assets/Alex/Level_5.unity
+    guid: 60d0ad601a4fce749b1b881ff09b71a0
+  - enabled: 1
+    path: Assets/Alex/Level_6.unity
+    guid: f5e8b2bd7b8534448aa1da5c29dfc5af
   m_configObjects: {}
