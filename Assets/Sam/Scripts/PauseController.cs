@@ -8,11 +8,13 @@ using UnityEngine.SceneManagement;
 public class PauseController : MonoBehaviour
 {
     public Canvas PauseUI;
-
+    public GameObject settings;
     public void Awake()
     {
         Play();
     }
+
+    public void Settings() => settings.SetActive(true);
 
     public void Start()
     {
