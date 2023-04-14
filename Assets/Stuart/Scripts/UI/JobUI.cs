@@ -11,12 +11,16 @@ namespace Stuart
 		[SerializeField] private Transform container;
 		[SerializeField] private JobUISlot jobUISlotPrefab;
 		private List<JobUISlot> spawnedUI = new();
-
+		private Canvas canvas;
 		private void Start()
 		{
 			JobFactory.JobAdded += SpawnJob;
 			JobFactory.JobCompleted += JobComplete;
+			GameController.Instance.OnPauseChanged += (x) => canvas.enabled = !x;
 		}
+
+		private void OnValidate()=>canvas = GetComponent<Canvas>();
+		
 
 		private void JobComplete(JobWithTiming job)
 		{
