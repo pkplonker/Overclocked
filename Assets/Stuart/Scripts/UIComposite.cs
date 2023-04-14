@@ -29,6 +29,10 @@ namespace Stuart
 			var thisItem = item as CompositeItem;
 			if (thisItem == null)
 			{
+				tmp.fontSize = 2000;
+				var sc = GetComponentInParent<Item>();
+				if (sc != null)
+					transform.localScale = new Vector3(transform.localScale.x/sc.transform.localScale.x,transform.localScale.y/sc.transform.localScale.y,transform.localScale.z/sc.transform.localScale.z); 
 				switch (item.type)
 				{
 					case ItemType.HDD:
@@ -48,6 +52,7 @@ namespace Stuart
 
 			foreach (var sumItem in thisItem.subItems)
 			{
+				tmp.fontSize = 1000;
 				switch (sumItem.type)
 				{
 					case ItemType.HDD:
