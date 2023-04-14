@@ -14,6 +14,8 @@ public class GameOver : MonoBehaviour
     {
         GameController.Instance.OnGameOver += (_) => loseScreen.SetActive(true);
         JobFactory.OnWin += () => winScreen.SetActive(true);
+        loseScreen.SetActive(false);
+        winScreen.SetActive(false);
 
     }
 
