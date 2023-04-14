@@ -32,7 +32,8 @@ namespace Stuart
 				tmp.fontSize = 2000;
 				var sc = GetComponentInParent<Item>();
 				if (sc != null)
-					transform.localScale = new Vector3(transform.localScale.x/sc.transform.localScale.x,transform.localScale.y/sc.transform.localScale.y,transform.localScale.z/sc.transform.localScale.z); 
+					transform.localScale = new Vector3(transform.localScale.x/sc.transform.localScale.x,transform.localScale.y/sc.transform.localScale.y,transform.localScale.z/sc.transform.localScale.z);
+				if (item == null) return "";
 				switch (item.type)
 				{
 					case ItemType.HDD:
