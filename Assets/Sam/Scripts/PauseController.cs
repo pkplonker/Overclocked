@@ -36,7 +36,6 @@ public class PauseController : MonoBehaviour
     public void Play()
     {
         PauseUI.enabled = false;
-
     }
 
     public void Pause()
@@ -57,6 +56,6 @@ public class PauseController : MonoBehaviour
 
     public void Continue()
     {
-        
+      GameController.Instance.SetPause(false);
     }
 }
