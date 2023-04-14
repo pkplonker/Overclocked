@@ -16,7 +16,7 @@ namespace Stuart
 
 		private void Start()
 		{
-			text.text = "£0";
+			text.text = "0";
 			JobFactory.JobCompleted += JobComplete;
 			JobComplete(new JobWithTiming());
 		}
@@ -27,7 +27,7 @@ namespace Stuart
 			if (coroutine == null)
 				StartCoroutine(UpdateTextCor());
 		}
-		private void UpdateText()=>text.text = $"£{currentAmount.ToString("n0")}";
+		private void UpdateText()=>text.text = $"{currentAmount.ToString("n0")}";
 		private IEnumerator UpdateTextCor()
 		{
 			var delta = targetAmount - currentAmount;
